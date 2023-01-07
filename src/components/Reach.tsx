@@ -18,7 +18,7 @@ import mail from "../assets/mail.svg";
 const Reach = () => {
   return (
     <Box id='hero'>
-      <Container maxW='7xl'>
+      <Container maxW='7xl' id='reach'>
         <Flex w='full' py='100px'>
           <VStack w='50%' spacing='20px' align='flex-start'>
             <Text fontSize='40' fontWeight='bold' color='#ffffff'>

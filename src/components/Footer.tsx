@@ -41,11 +41,11 @@ const Footer = () => {
             </HStack>
 
             <HStack pt='70px' w='300px' justify='space-between'>
-              <Image src={linkedin} w='25px' />
-              <Image src={twitter} w='25px' />
-              <Image src={dribble} w='25px' />
-              <Image src={behance} w='25px' />
-              <Image src={insta} w='25px' />
+              <Image src={linkedin} w='22px' />
+              <Image src={twitter} w='22px' />
+              <Image src={dribble} w='22px' />
+              <Image src={behance} w='22px' />
+              <Image src={insta} w='22px' />
             </HStack>
           </VStack>
 

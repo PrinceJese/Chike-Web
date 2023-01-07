@@ -1,4 +1,4 @@
-import { Box, Container, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import work1 from "../assets/work1.png";
 import work2 from "../assets/work2.png";
 import work3 from "../assets/work3.png";
@@ -7,26 +7,36 @@ import work4 from "../assets/work4.png";
 const Works = () => {
   return (
     <Box>
-      <Container maxW='7xl'>
+      <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
         <VStack align='flex-start' py='80px' spacing='30px' w='full'>
           <Text fontSize='13px' color='#8491A0'>
             My Works
           </Text>
 
-          <Text fontSize='35px' color='#ffffff' fontWeight='bold' lineHeight='30px'>
+          <Text
+            fontSize={{ base: "25px", xl: "35px" }}
+            color='#ffffff'
+            fontWeight='bold'
+            lineHeight='30px'
+          >
             Check out some of <br /> my recent works
           </Text>
 
-          <Box py='50px'>
+          <Box pt='50px' pb={{ base: "5px", xl: "50px" }}>
             <Image src={work1} borderRadius='10px' />
           </Box>
 
-          <HStack justify='space-between' w='full'>
+          <Flex
+            justify='space-between'
+            gap={{ base: "30px", xl: "0px" }}
+            direction={{ base: "column", xl: "row" }}
+            w='full'
+          >
             <Image src={work2} borderRadius='10px' />
             <Image src={work3} borderRadius='10px' />
-          </HStack>
+          </Flex>
 
-          <Box py='50px'>
+          <Box pb='20px' pt={{ base: "5px", xl: "50px" }}>
             <Image src={work4} borderRadius='10px' />
           </Box>
 
@@ -42,7 +52,7 @@ const Works = () => {
               borderColor='#5221E6'
               color='#ffffff'
               cursor='default'
-              boxShadow='xl'
+              _active={{ bgColor: "#5221E6" }}
             >
               VIEW ALL PROJECTS
             </Box>
