@@ -8,23 +8,25 @@ const Navbar = () => {
         <HStack w='full'>
           <HStack w='50%'>
             <Image src={logo} />
-            <Text color='white'>Ahamefula Ayomide</Text>
+            <Text color='white' fontWeight='bold'>
+              Ahamefula Ayomide
+            </Text>
           </HStack>
 
           <HStack w='50%' color='rgba(255, 255, 255, 0.85);' justify='space-between' pl='100px'>
-            <Link fontSize='13px' _hover={{ color: "white" }} href='#about'>
+            <Link fontSize='14px' _hover={{ color: "white" }} href='#about'>
               About
             </Link>
 
-            <Link fontSize='13px' _hover={{ color: "white" }} href='#process'>
+            <Link fontSize='14px' _hover={{ color: "white" }} href='#process'>
               Design Process
             </Link>
 
-            <Link fontSize='13px' _hover={{ color: "white" }} href='#works'>
+            <Link fontSize='14px' _hover={{ color: "white" }} href='#works'>
               Works
             </Link>
 
-            <Link fontSize='13px' _hover={{ color: "white" }} href='#contact'>
+            <Link fontSize='14px' _hover={{ color: "white" }} href='#contact'>
               Contact
             </Link>
 

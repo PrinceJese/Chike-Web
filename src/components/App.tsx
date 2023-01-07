@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Feedback from "./Feedback";
+import Footer from "./Footer";
 import Herosection from "./Herosection";
 import Navbar from "./Navbar";
 import Process from "./Process";
@@ -15,6 +16,7 @@ const App = () => {
       <Works />
       <Feedback />
       <Reach />
+      <Footer />
     </Box>
   );
 };

@@ -13,7 +13,7 @@ const Works = () => {
             My Works
           </Text>
 
-          <Text fontSize='30px' color='#ffffff' fontWeight='bold' lineHeight='30px'>
+          <Text fontSize='35px' color='#ffffff' fontWeight='bold' lineHeight='30px'>
             Check out some of <br /> my recent works
           </Text>
 
