@@ -69,11 +69,11 @@ const Linkstack = () => {
               </VStack>
 
               <HStack pb='50px' w='full' justify='space-around'>
-                <Image src={linkedin2} w='30px' />
-                <Image src={twitter2} w='30px' />
-                <Image src={dribble2} w='30px' />
-                <Image src={behance2} w='30px' />
-                <Image src={insta2} w='30px' />
+                <Image src={linkedin2} w='25px' />
+                <Image src={twitter2} w='325x' />
+                <Image src={dribble2} w='25px' />
+                <Image src={behance2} w='25px' />
+                <Image src={insta2} w='25px' />
               </HStack>
             </VStack>
           </DrawerBody>

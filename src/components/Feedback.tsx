@@ -5,17 +5,32 @@ import arrow from "../assets/arrow.png";
 const Feedback = () => {
   return (
     <Box bg='#FFF3E4' h='100vh'>
-      <Container maxW='7xl' h='full'>
+      <Container maxW={{ base: "95%", xl: "7xl" }} h='full'>
         <Flex
           w='full'
           h='full'
           justify='center'
-          py={{ xl: "50px", "2xl": "80px" }}
+          py={{ base: "50px", "2xl": "80px" }}
           position={"relative"}
+          direction={{ base: "column", xl: "row" }}
         >
-          <VStack w='45%' align='flex-start' spacing='30px'>
-            <Text fontSize='40px' fontWeight='bold' lineHeight='40px'>
+          <VStack w={{ base: "full", xl: "45%" }} align='flex-start' spacing='30px'>
+            <Text
+              fontSize='40px'
+              fontWeight='bold'
+              lineHeight='40px'
+              display={{ base: "none", xl: "block" }}
+            >
               Feedback from people <br /> I have worked with
+            </Text>
+
+            <Text
+              fontSize='35px'
+              fontWeight='bold'
+              lineHeight='35px'
+              display={{ base: "block", xl: "none" }}
+            >
+              Feedback from people I have worked with
             </Text>
 
             <Text fontSize='15px'>
@@ -24,17 +39,29 @@ const Feedback = () => {
             </Text>
           </VStack>
 
-          <VStack w='45%' spacing='50px' className='overflow' overflowX='hidden'>
+          <VStack
+            w={{ base: "full", xl: "45%" }}
+            spacing='50px'
+            className='overflow'
+            overflowX='hidden'
+            mt={{ base: "50px", xl: "0px" }}
+          >
             <Comments />
           </VStack>
 
-          <Image src={arrow} h='60px' position={"absolute"} top='200px' right='30px' />
+          <Image
+            src={arrow}
+            h='60px'
+            position={"absolute"}
+            top={{ base: "400", xl: "195px" }}
+            right={{ base: "-10px", xl: "25px" }}
+          />
 
           <Text
             id='nav'
             position={"absolute"}
-            top='220px'
-            right='-20px'
+            top={{ base: "420px", xl: "220px" }}
+            right={{ base: "-53px", xl: "-20px" }}
             fontSize='10px'
             transform='rotate(90deg)'
           >
