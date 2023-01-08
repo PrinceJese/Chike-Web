@@ -33,7 +33,7 @@ const Process = () => {
 
                 <Text
                   align={{ base: "center", xl: "initial" }}
-                  fontSize={{ base: "17px", xl: "15px" }}
+                  fontSize={{ base: "18px", xl: "16px" }}
                 >
                   With a background in both user interface and experience design, I have a
                   well-rounded skill set that allows me to tackle projects of various scales and
@@ -48,7 +48,7 @@ const Process = () => {
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Visual Design
                   </Text>
-                  <Text align='center' fontSize={{ base: "17px", xl: "15px" }}>
+                  <Text align='center' fontSize={{ base: "18px", xl: "16px" }}>
                     I am skilled in the art of visual communication and story telling through the
                     use of color, typography, imagery, and layout to create visually appealing and
                     effective designs.
@@ -60,7 +60,7 @@ const Process = () => {
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     UX Writing
                   </Text>
-                  <Text align='center' fontSize={{ base: "17px", xl: "15px" }}>
+                  <Text align='center' fontSize={{ base: "18px", xl: "16px" }}>
                     Working at Facebook has taught me a lot about how to understand users, solve
                     problems and build great products.
                   </Text>
@@ -73,7 +73,7 @@ const Process = () => {
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Ux Research
                   </Text>
-                  <Text align='center' fontSize={{ base: "17px", xl: "15px" }}>
+                  <Text align='center' fontSize={{ base: "18px", xl: "16px" }}>
                     I am proficient in the area of systematic study of users and their requirements
                     — creating a product or service that meets user requirements in the most
                     effective and satisfying way possible.
@@ -85,7 +85,7 @@ const Process = () => {
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Interaction Design
                   </Text>
-                  <Text align='center' fontSize={{ base: "17px", xl: "15px" }}>
+                  <Text align='center' fontSize={{ base: "18px", xl: "16px" }}>
                     Working at Facebook has taught me a lot about how to understand users, solve
                     problems and build great products.
                   </Text>

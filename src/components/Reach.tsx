@@ -27,7 +27,7 @@ const Reach = () => {
 
             <Text
               w={{ base: "full", xl: "400px" }}
-              fontSize='16'
+              fontSize='17px'
               color='rgba(255, 255, 255, 0.75);'
             >
               Are you are looking to hire a product designer? Or are you looking to collaborate on a
@@ -37,12 +37,16 @@ const Reach = () => {
             <VStack pt='20px' align='flex-start'>
               <HStack>
                 <Image src={mail} />
-                <Text color='#8491A0'>ahamefulaayomide@gmail.com</Text>
+                <Text color='#8491A0' fontSize='17px'>
+                  ahamefulaayomide@gmail.com
+                </Text>
               </HStack>
 
               <HStack>
                 <Image src={call} />
-                <Text color='#8491A0'>+234 708 430 9966</Text>
+                <Text color='#8491A0' fontSize='17px'>
+                  +234 708 430 9966
+                </Text>
               </HStack>
             </VStack>
           </VStack>
@@ -55,7 +59,7 @@ const Reach = () => {
           >
             <form id='form'>
               <FormControl pb='35px'>
-                <FormLabel fontSize='14px'>Name</FormLabel>
+                <FormLabel fontSize='16px'>Name</FormLabel>
                 <Input
                   w={{ base: "full", xl: "400px" }}
                   type='name'
@@ -65,7 +69,7 @@ const Reach = () => {
               </FormControl>
 
               <FormControl pb='35px'>
-                <FormLabel fontSize='14px'>Email</FormLabel>
+                <FormLabel fontSize='16px'>Email</FormLabel>
                 <Input
                   w={{ base: "full", xl: "400px" }}
                   type='email'
@@ -75,14 +79,14 @@ const Reach = () => {
               </FormControl>
 
               <FormControl pb='35px'>
-                <FormLabel fontSize='14px'>Message</FormLabel>
+                <FormLabel fontSize='16px'>Message</FormLabel>
                 <Textarea w={{ base: "full", xl: "400px" }} borderRadius='0px' bg='#424850' />
               </FormControl>
 
               <Button
                 colorScheme='purple'
                 h='55px'
-                fontSize='12px'
+                fontSize='15px'
                 w={{ base: "full", xl: "400px" }}
                 borderRadius='0px'
               >

@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Text, Image, HStack, Link, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, Image, HStack, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import linkedin2 from "@/assets/linkedin2.svg";
 import twitter2 from "@/assets/twitter2.svg";
@@ -9,9 +10,25 @@ import call from "@/assets/call.svg";
 import mail from "@/assets/mail.svg";
 import arrow2 from "@/assets/arrow2.svg";
 
-const Footer = () => {
+const Footer = ({
+  footerColour,
+  onLinkClick,
+  onHomeClick,
+}: {
+  footerColour: string;
+  onLinkClick(): any;
+  onHomeClick(): any;
+}) => {
+  const handleChange = (): any => {
+    onLinkClick();
+  };
+
+  const handleHomeClick = (): any => {
+    onHomeClick();
+  };
+
   return (
-    <Box>
+    <Box bg={footerColour}>
       <Container maxW='8xl'>
         <Flex
           w='full'
@@ -20,15 +37,20 @@ const Footer = () => {
           gap={{ base: "50px", xl: "0px" }}
         >
           <VStack w={{ base: "full", xl: "50%" }} align='flex-start' spacing='20px'>
-            <HStack>
+            <HStack
+              color='white'
+              fontWeight='bold'
+              fontSize='18px'
+              _hover={{ textDecoration: "none" }}
+            >
               <Image src={logo} />
-              <Text color='white' fontWeight='bold'>
+              <Link to='/' onClick={handleHomeClick}>
                 Ahamefula Ayomide
-              </Text>
+              </Link>
             </HStack>
 
             <Text
-              fontSize='16px'
+              fontSize='17px'
               w={{ base: "full", xl: "350px" }}
               color='rgba(255, 255, 255, 0.75)'
             >
@@ -37,16 +59,16 @@ const Footer = () => {
             </Text>
 
             <HStack w={{ base: "full", xl: "350px" }} justify='space-between'>
-              <HStack>
+              <HStack fontSize='16px'>
                 <Image src={arrow2} />
-                <Text fontSize='15px' color='green'>
-                  Drop me a like
-                </Text>
+                <Text color='green'>Drop me a like</Text>
               </HStack>
 
-              <Link fontSize='15px' color='rgba(255, 255, 255, 0.75)' _hover={{ color: "green" }}>
-                Let's get started
-              </Link>
+              <Box color='rgba(255, 255, 255, 0.75)'>
+                <Link id='footlink' to='/'>
+                  Let's get started
+                </Link>
+              </Box>
             </HStack>
 
             <HStack pt='70px' px='20px' w={{ base: "full", xl: "300px" }} justify='space-between'>
@@ -65,15 +87,25 @@ const Footer = () => {
             align='flex-start'
           >
             <VStack w={{ base: "full", xl: "50%" }} align='flex-start' color='white' spacing='20px'>
-              <Link _hover={{ color: "green" }}>Home</Link>
+              <Link id='footlink' to='/' onClick={handleHomeClick}>
+                Home
+              </Link>
 
-              <Link _hover={{ color: "green" }}>About</Link>
+              <Link id='footlink' to='/about' onClick={handleChange}>
+                About
+              </Link>
 
-              <Link _hover={{ color: "green" }}>Design Process</Link>
+              <Link id='footlink' to='/process' onClick={handleChange}>
+                Design Process
+              </Link>
 
-              <Link _hover={{ color: "green" }}>Works</Link>
+              <Link id='footlink' to='/works' onClick={handleChange}>
+                Works
+              </Link>
 
-              <Link _hover={{ color: "green" }}>Contact</Link>
+              <Link id='footlink' to='#reach' onClick={handleChange}>
+                Contact
+              </Link>
             </VStack>
 
             <VStack
@@ -85,21 +117,21 @@ const Footer = () => {
               <VStack h='full' align='flex-start' spacing='20px' color='white'>
                 <HStack>
                   <Image src={mail} />
-                  <Text fontSize='14px' color='white'>
+                  <Text fontSize='16px' color='white'>
                     ahamefulaayomide@gmail.com
                   </Text>
                 </HStack>
 
                 <HStack>
                   <Image src={call} />
-                  <Text fontSize='14px' color='white'>
+                  <Text fontSize='16px' color='white'>
                     +234 708 430 9966
                   </Text>
                 </HStack>
               </VStack>
 
-              <VStack align='flex-start'>
-                <Text as='span' fontSize='12px' color='rgba(255, 255, 255, 0.75)'>
+              <VStack align='flex-start' pt='20px'>
+                <Text as='span' fontSize='13px' color='rgba(255, 255, 255, 0.75)'>
                   Designed by{" "}
                   <Text as='span' color='white' fontWeight='bold'>
                     Ahamefula Ayomide{" "}
@@ -107,7 +139,7 @@ const Footer = () => {
                   &copy; 2023
                 </Text>
 
-                <Text as='span' fontSize='12px' color='rgba(255, 255, 255, 0.75)'>
+                <Text as='span' fontSize='13px' color='rgba(255, 255, 255, 0.75)'>
                   Coded by{" "}
                   <Text as='span' color='white' fontWeight='bold'>
                     Seye Alexander{" "}

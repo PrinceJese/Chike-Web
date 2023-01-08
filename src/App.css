@@ -8,6 +8,14 @@ html {
   background-color: #000000;
 }
 
+#navlink:hover {
+  color: white;
+}
+
+#footlink:hover {
+  color: green;
+}
+
 #hero {
   background: linear-gradient(90deg, #181823 59%, #000000 41%);
 }

@@ -2,8 +2,8 @@ import {
   HStack,
   Image,
   VStack,
-  Link,
   Text,
+  Box,
   Drawer,
   DrawerBody,
   DrawerHeader,
@@ -12,6 +12,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import menu from "@/assets/menu.svg";
 import linkedin2 from "@/assets/linkedin2.svg";
@@ -21,9 +22,17 @@ import behance2 from "@/assets/behance2.svg";
 import insta2 from "@/assets/insta2.svg";
 import { useRef } from "react";
 
-const Linkstack = () => {
+const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(): any }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
+
+  const handleChange = (): any => {
+    onLinkClick();
+  };
+
+  const handleHomeClick = (): any => {
+    onHomeClick();
+  };
 
   return (
     <HStack display={{ base: "flex", xl: "none" }}>
@@ -39,36 +48,53 @@ const Linkstack = () => {
         <DrawerOverlay />
         <DrawerContent bg='black'>
           <DrawerCloseButton mt='10px' w='30px' border='0px' bg='none' color='white' />
-          <DrawerHeader mb='30px'>
-            <HStack>
-              <Image src={logo} w='20px' />
-              <Text color='white' fontWeight='bold'>
-                Ahamefula Ayomide
-              </Text>
-            </HStack>
+          <DrawerHeader>
+            <Box onClick={onClose}>
+              <Link to='/' onClick={handleHomeClick}>
+                <HStack>
+                  <Image src={logo} w='20px' />
+                  <Text color='white' fontSize='18px' fontWeight='bold'>
+                    Ahamefula Ayomide
+                  </Text>
+                </HStack>
+              </Link>
+            </Box>
           </DrawerHeader>
 
           <DrawerBody>
-            <VStack align='flex-start' h='full' justify='space-between'>
-              <VStack spacing='30px' align='flex-start' color='rgba(255, 255, 255, 0.85)'>
-                <Link fontSize='18px' href='#about' _hover={{ color: "white" }} onClick={onClose}>
-                  About
-                </Link>
+            <VStack align='flex-start' h='full' justify='space-between' py='40px'>
+              <VStack
+                fontSize='20px'
+                spacing='30px'
+                align='flex-start'
+                color='rgba(255, 255, 255, 0.85)'
+              >
+                <Box onClick={onClose}>
+                  <Link to='/about' id='navlink' onClick={handleChange}>
+                    About
+                  </Link>
+                </Box>
 
-                <Link fontSize='18px' href='#process' _hover={{ color: "white" }} onClick={onClose}>
-                  Design Process
-                </Link>
+                <Box onClick={onClose}>
+                  <Link to='/process' id='navlink' onClick={handleChange}>
+                    Design Process
+                  </Link>
+                </Box>
 
-                <Link fontSize='18px' href='#works' _hover={{ color: "white" }} onClick={onClose}>
-                  Works
-                </Link>
+                <Box onClick={onClose}>
+                  <Link to='/works' id='navlink' onClick={handleChange}>
+                    Works
+                  </Link>
+                </Box>
 
-                <Link fontSize='18px' href='#reach' _hover={{ color: "white" }} onClick={onClose}>
-                  Contact
-                </Link>
+                <Box onClick={onClose}>
+                  <Link to='#reach' id='navlink' onClick={handleChange}>
+                    Contact
+                  </Link>
+                </Box>
               </VStack>
 
-              <HStack pb='80px' w='full' justify='space-around'>
+              <HStack w='full' justify='space-around'>
                 <Image src={linkedin2} w='25px' />
                 <Image src={twitter2} w='325x' />
                 <Image src={dribble2} w='25px' />

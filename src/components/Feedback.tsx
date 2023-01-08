@@ -33,9 +33,17 @@ const Feedback = () => {
               Feedback from people I have worked with
             </Text>
 
-            <Text fontSize='15px'>
-              Here are a few lines from clients I have worked with in the past <br /> three years of
+            <Text
+              fontSize={{ base: "18px", "2xl": "22px" }}
+              display={{ base: "none", xl: "block" }}
+            >
+              Here are a few lines from clients I have worked within the past <br /> three years of
               my career.
+            </Text>
+
+            <Text fontSize='18px' display={{ base: "block", xl: "none" }}>
+              Here are a few lines from clients I have worked within the past three years of my
+              career.
             </Text>
           </VStack>
 

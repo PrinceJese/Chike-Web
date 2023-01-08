@@ -9,7 +9,7 @@ const Works = () => {
     <Box>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
         <VStack align='flex-start' py='80px' spacing='30px' w='full'>
-          <Text fontSize='13px' color='#8491A0'>
+          <Text fontSize='16px' fontWeight='bold' color='#8491A0'>
             My Works
           </Text>
 
