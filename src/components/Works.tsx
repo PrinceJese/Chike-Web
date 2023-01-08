@@ -1,4 +1,4 @@
-import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import work1 from "@/assets/work1.png";
 import work2 from "@/assets/work2.png";
 import work3 from "@/assets/work3.png";
@@ -41,21 +41,21 @@ const Works = () => {
           </Box>
 
           <HStack w='full' justify='flex-end'>
-            <Box
-              as='button'
+            <Button
               fontSize='11px'
               fontWeight='bold'
               borderRadius='1px'
+              bg='black'
               px='25px'
               py='10px'
               border='1px'
               borderColor='#5221E6'
               color='#ffffff'
-              cursor='default'
               _active={{ bgColor: "#5221E6" }}
+              _hover={{ bgColor: "#5221E6" }}
             >
               VIEW ALL PROJECTS
-            </Box>
+            </Button>
           </HStack>
         </VStack>
       </Container>
