@@ -1,12 +1,12 @@
 import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
-import processlogo1 from "../assets/processlogo1.svg";
-import processlogo2 from "../assets/processlogo2.svg";
-import processlogo3 from "../assets/processlogo3.svg";
-import processlogo4 from "../assets/processlogo4.svg";
-import icon2 from "../assets/icon2.svg";
-import icon3 from "../assets/icon3.svg";
-import icon4 from "../assets/icon4.svg";
-import icon1 from "../assets/icon1.svg";
+import processlogo1 from "@/assets/processlogo1.svg";
+import processlogo2 from "@/assets/processlogo2.svg";
+import processlogo3 from "@/assets/processlogo3.svg";
+import processlogo4 from "@/assets/processlogo4.svg";
+import icon2 from "@/assets/icon2.svg";
+import icon3 from "@/assets/icon3.svg";
+import icon4 from "@/assets/icon4.svg";
+import icon1 from "@/assets/icon1.svg";
 
 const Process = () => {
   return (

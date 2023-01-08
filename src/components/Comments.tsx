@@ -1,5 +1,5 @@
 import { Box, VStack, HStack, Image, Text } from "@chakra-ui/react";
-import pic from "../assets/pic.png";
+import pic from "@/assets/pic.png";
 
 const Comments = () => {
   return (

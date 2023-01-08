@@ -1,6 +1,6 @@
 import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import coder from "../assets/coder.svg";
-import location from "../assets/location.svg";
+import coder from "@/assets/coder.svg";
+import location from "@/assets/location.svg";
 
 const Herosection = () => {
   return (

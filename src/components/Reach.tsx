@@ -12,8 +12,8 @@ import {
   Button,
   Textarea,
 } from "@chakra-ui/react";
-import call from "../assets/call.svg";
-import mail from "../assets/mail.svg";
+import call from "@/assets/call.svg";
+import mail from "@/assets/mail.svg";
 
 const Reach = () => {
   return (

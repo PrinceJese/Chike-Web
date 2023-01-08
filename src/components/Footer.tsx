@@ -1,13 +1,13 @@
 import { Box, Container, Flex, Text, Image, HStack, Link, VStack } from "@chakra-ui/react";
-import logo from "../assets/logo.svg";
-import linkedin2 from "../assets/linkedin2.svg";
-import twitter2 from "../assets/twitter2.svg";
-import dribble2 from "../assets/dribble2.svg";
-import behance2 from "../assets/behance2.svg";
-import insta2 from "../assets/insta2.svg";
-import call from "../assets/call.svg";
-import mail from "../assets/mail.svg";
-import arrow2 from "../assets/arrow2.svg";
+import logo from "@/assets/logo.svg";
+import linkedin2 from "@/assets/linkedin2.svg";
+import twitter2 from "@/assets/twitter2.svg";
+import dribble2 from "@/assets/dribble2.svg";
+import behance2 from "@/assets/behance2.svg";
+import insta2 from "@/assets/insta2.svg";
+import call from "@/assets/call.svg";
+import mail from "@/assets/mail.svg";
+import arrow2 from "@/assets/arrow2.svg";
 
 const Footer = () => {
   return (

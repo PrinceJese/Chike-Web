@@ -12,13 +12,13 @@ import {
   DrawerCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import logo from "../assets/logo.svg";
-import menu from "../assets/menu.svg";
-import linkedin2 from "../assets/linkedin2.svg";
-import twitter2 from "../assets/twitter2.svg";
-import dribble2 from "../assets/dribble2.svg";
-import behance2 from "../assets/behance2.svg";
-import insta2 from "../assets/insta2.svg";
+import logo from "@/assets/logo.svg";
+import menu from "@/assets/menu.svg";
+import linkedin2 from "@/assets/linkedin2.svg";
+import twitter2 from "@/assets/twitter2.svg";
+import dribble2 from "@/assets/dribble2.svg";
+import behance2 from "@/assets/behance2.svg";
+import insta2 from "@/assets/insta2.svg";
 import { useRef } from "react";
 
 const Linkstack = () => {
@@ -68,7 +68,7 @@ const Linkstack = () => {
                 </Link>
               </VStack>
 
-              <HStack pb='50px' w='full' justify='space-around'>
+              <HStack pb='80px' w='full' justify='space-around'>
                 <Image src={linkedin2} w='25px' />
                 <Image src={twitter2} w='325x' />
                 <Image src={dribble2} w='25px' />

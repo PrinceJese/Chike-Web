@@ -1,5 +1,5 @@
 import { Box, Container, HStack, Image, Text, Link, Switch } from "@chakra-ui/react";
-import logo from "../assets/logo.svg";
+import logo from "@/assets/logo.svg";
 import Linkstack from "./linkstack";
 
 const Navbar = () => {

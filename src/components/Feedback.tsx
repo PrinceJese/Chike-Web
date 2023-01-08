@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import Comments from "./Comments";
-import arrow from "../assets/arrow.png";
+import arrow from "@/assets/arrow.png";
 
 const Feedback = () => {
   return (
