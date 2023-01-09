@@ -14,7 +14,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
 
   return (
     <Box bg='#000000' p={0}>
-      <Container maxW='8xl' py={{ base: "15px", xl: "20px" }}>
+      <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
             <Link onClick={handleHomeClick} to='/'>
@@ -34,7 +34,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             justify='space-between'
             pl='100px'
             display={{ base: "none", xl: "flex" }}
-            fontSize='16px'
+            fontSize='15px'
           >
             <Link id='navlink' to='/about' onClick={handleChange}>
               About

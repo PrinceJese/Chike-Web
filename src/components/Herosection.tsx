@@ -7,7 +7,7 @@ const Herosection = () => {
     <Box id='hero' h='100vh' color='white' p={0}>
       <Container maxW='7xl' p={0} id='about'>
         <Flex justify='center'>
-          <VStack w={{ base: "86%", xl: "600px" }} pt={{ base: "140px", "2xl": "200px" }}>
+          <VStack w={{ base: "86%", xl: "600px" }} pt={{ base: "170px", "2xl": "200px" }}>
             <HStack position={"relative"}>
               <Text
                 align='center'

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutMe from "@/pages/AboutMe";
+import Works from "@/pages/Works";
 import DesignProcess from "@/pages/DesignProcess";
 import Home from "@/pages/Home";
 import { useState } from "react";
@@ -29,6 +30,8 @@ const App = () => {
           <Route path='/process' element={<DesignProcess />} />
 
           <Route path='/about' element={<AboutMe />} />
+
+          <Route path='/works' element={<Works />} />
         </Routes>
 
         <Footer

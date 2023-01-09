@@ -43,7 +43,7 @@ const Process = () => {
               </VStack>
 
               <VStack w={{ base: "full", xl: "26%" }} spacing='40px'>
-                <VStack w='full'>
+                <VStack w='full' _hover={{ color: "pink.600", transition: "0.5s ease-out" }}>
                   <Image src={icon1} />
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Visual Design
@@ -55,7 +55,7 @@ const Process = () => {
                   </Text>
                 </VStack>
 
-                <VStack w='full'>
+                <VStack w='full' _hover={{ color: "gray.500", transition: "0.5s ease-out" }}>
                   <Image src={icon2} />
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     UX Writing
@@ -68,7 +68,7 @@ const Process = () => {
               </VStack>
 
               <VStack w={{ base: "full", xl: "26%" }} spacing='40px'>
-                <VStack w='full'>
+                <VStack w='full' _hover={{ color: "green.500", transition: "0.5s ease-out" }}>
                   <Image src={icon3} />
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Ux Research
@@ -80,7 +80,7 @@ const Process = () => {
                   </Text>
                 </VStack>
 
-                <VStack w='full'>
+                <VStack w='full' _hover={{ color: "purple.600", transition: "0.5s ease-out" }}>
                   <Image src={icon4} />
                   <Text fontSize={{ base: "19px", xl: "16px" }} fontWeight='bold'>
                     Interaction Design

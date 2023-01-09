@@ -9,7 +9,10 @@ html {
 }
 
 #navlink:hover {
-  color: white;
+  color: #5221e6;
+  transition: 0.8s ease-out;
+  border-radius: 3px;
+  border-bottom: 1.5px #5221e6 solid;
 }
 
 #footlink:hover {

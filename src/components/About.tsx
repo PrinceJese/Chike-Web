@@ -16,7 +16,7 @@ const About = () => {
             align='flex-end'
             spacing='50px'
             justify='center'
-            py='70px'
+            py={{ base: "70px", xl: "100px", "2xl": "150px" }}
             px={{ base: "0px", xl: "70px" }}
           >
             <VStack spacing='20px' fontSize={{ base: "18px", xl: "15px" }}>
@@ -49,13 +49,14 @@ const About = () => {
             </VStack>
 
             <Button
-              bg='#9D9D9D'
+              bg='#9d9d9dc0'
               w='250px'
+              fontSize={{ base: "17px", xl: "14px" }}
               borderRadius='2px'
               _active={{ bgColor: "#9d9d9d92" }}
               _hover={{ bgColor: "#9d9d9dc0" }}
             >
-              Resume
+              RESUME
             </Button>
           </VStack>
         </Flex>
