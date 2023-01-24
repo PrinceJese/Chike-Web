@@ -20,7 +20,7 @@ const Reach = () => {
     <Box id='hero'>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='reach'>
         <Flex w='full' py={{ base: "70px", xl: "100px" }} direction={{ base: "column", xl: "row" }}>
-          <VStack w={{ base: "full", xl: "50%" }} spacing='20px' align='flex-start'>
+          <VStack w={{ base: "full", xl: "55%" }} spacing='20px' align='flex-start'>
             <Text fontSize={{ base: "35px", xl: "40px" }} fontWeight='bold' color='#ffffff'>
               Wanna get Started?
             </Text>
@@ -52,42 +52,32 @@ const Reach = () => {
           </VStack>
 
           <VStack
-            w={{ base: "full", xl: "50%" }}
+            w={{ base: "full", xl: "45%" }}
             mt={{ base: "50px", xl: "0px" }}
-            align='flex-start'
+            // align='flex-start'
             color='white'
           >
             <form id='form'>
-              <FormControl pb='35px'>
+              <FormControl pb='50px'>
                 <FormLabel fontSize='16px'>Name</FormLabel>
-                <Input
-                  w={{ base: "full", xl: "400px" }}
-                  type='name'
-                  borderRadius='0px'
-                  bg='#424850'
-                />
+                <Input w='full' h='50px' type='name' borderRadius='0px' bg='#424850' />
               </FormControl>
 
-              <FormControl pb='35px'>
+              <FormControl pb='50px'>
                 <FormLabel fontSize='16px'>Email</FormLabel>
-                <Input
-                  w={{ base: "full", xl: "400px" }}
-                  type='email'
-                  borderRadius='0px'
-                  bg='#424850'
-                />
+                <Input w='full' h='50px' type='email' borderRadius='0px' bg='#424850' />
               </FormControl>
 
-              <FormControl pb='35px'>
+              <FormControl pb='50px'>
                 <FormLabel fontSize='16px'>Message</FormLabel>
-                <Textarea w={{ base: "full", xl: "400px" }} borderRadius='0px' bg='#424850' />
+                <Textarea w='full' h='100px' borderRadius='0px' bg='#424850' />
               </FormControl>
 
               <Button
                 colorScheme='purple'
                 h='55px'
                 fontSize='15px'
-                w={{ base: "full", xl: "400px" }}
+                w={{ base: "full", xl: "full" }}
                 borderRadius='0px'
               >
                 LETS GET STARTED

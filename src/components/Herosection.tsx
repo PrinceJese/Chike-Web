@@ -38,7 +38,7 @@ const Herosection = () => {
 
             <Text
               lineHeight={{ base: "20px", xl: "25px" }}
-              fontSize={{ base: "18px", "2xl": "25px" }}
+              fontSize='18px'
               align='center'
               color='rgba(255, 255, 255, 0.75);'
             >

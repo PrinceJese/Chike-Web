@@ -15,12 +15,36 @@ html {
   border-bottom: 1.5px #5221e6 solid;
 }
 
-#footlink:hover {
-  color: green;
-}
-
 #hero {
   background: linear-gradient(90deg, #181823 59%, #000000 41%);
+}
+
+.card {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #232525b6;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: all 0.8s ease-in-out;
 }
 
 .overflow::-webkit-scrollbar {
@@ -29,4 +53,8 @@ html {
 
 #form {
   width: 100%;
+}
+
+#footlink:hover {
+  color: green;
 }

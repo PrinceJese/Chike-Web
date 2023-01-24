@@ -1,14 +1,14 @@
 import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import work1 from "@/assets/work1.png";
-import work2 from "@/assets/work2.png";
-import work3 from "@/assets/work3.png";
-import work4 from "@/assets/work4.png";
+import work1 from "@/assets/work1.svg";
+import work2 from "@/assets/work2.svg";
+import work3 from "@/assets/work3.svg";
+import work4 from "@/assets/work4.svg";
 
 const Works = () => {
   return (
     <Box>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
-        <VStack align='flex-start' py='80px' spacing='30px' w='full'>
+        <VStack align='flex-start' py='80px' w='full' spacing={{ base: "20px", xl: "50px" }}>
           <Text fontSize='16px' fontWeight='bold' color='#8491A0'>
             My Works
           </Text>
@@ -22,22 +22,176 @@ const Works = () => {
             Check out some of <br /> my recent works
           </Text>
 
-          <Box pt='50px' pb={{ base: "5px", xl: "50px" }}>
-            <Image src={work1} borderRadius='10px' />
+          <Box borderRadius='20px' h={{ base: "190px", xl: "600px" }} w='full' overflow='hidden'>
+            <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work1}>
+              <Box
+                className='overlay'
+                pt={{ base: "40px", xl: "350px" }}
+                pl={{ base: "20px", xl: "60px" }}
+              >
+                <Text
+                  fontSize={{ base: "25px", xl: "32px" }}
+                  fontWeight='bold'
+                  lineHeight={{ base: "28px", xl: "30px" }}
+                  color='#ffffff'
+                >
+                  T-Connect
+                </Text>
+
+                <Box>
+                  <Text
+                    fontSize='18px'
+                    as='em'
+                    lineHeight={{ base: "20px", xl: "30px" }}
+                    color='#ffffff'
+                  >
+                    Leading NFT rent and lease Marketplace
+                  </Text>
+                </Box>
+
+                <Button
+                  mt={{ base: "12px", xl: "25px" }}
+                  h='45px'
+                  px={{ base: "15px", xl: "45px" }}
+                  colorScheme='purple'
+                >
+                  View More
+                </Button>
+              </Box>
+            </Box>
           </Box>
 
-          <Flex
-            justify='space-between'
-            gap={{ base: "30px", xl: "0px" }}
-            direction={{ base: "column", xl: "row" }}
-            w='full'
-          >
-            <Image src={work2} borderRadius='10px' />
-            <Image src={work3} borderRadius='10px' />
+          <Flex justify='space-between' w='full' my='5px'>
+            <Box w='48%'>
+              <Box
+                borderRadius='20px'
+                h={{ base: "210px", xl: "800px" }}
+                w='full'
+                overflow='hidden'
+              >
+                <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work2}>
+                  <Box
+                    className='overlay'
+                    pt={{ base: "25px", xl: "350px" }}
+                    pl={{ base: "15px", xl: "60px" }}
+                  >
+                    <Text
+                      fontSize={{ base: "25px", xl: "32px" }}
+                      fontWeight='bold'
+                      lineHeight={{ base: "28px", xl: "30px" }}
+                      color='#ffffff'
+                    >
+                      T-Connect
+                    </Text>
+
+                    <Box>
+                      <Text
+                        fontSize='18px'
+                        as='em'
+                        lineHeight={{ base: "20px", xl: "30px" }}
+                        color='#ffffff'
+                      >
+                        Leading NFT rent and lease Marketplace
+                      </Text>
+                    </Box>
+
+                    <Button
+                      mt={{ base: "12px", xl: "25px" }}
+                      h='45px'
+                      px={{ base: "15px", xl: "45px" }}
+                      colorScheme='purple'
+                    >
+                      View More
+                    </Button>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+
+            <Box w='48%'>
+              <Box
+                borderRadius='20px'
+                h={{ base: "210px", xl: "800px" }}
+                w='full'
+                overflow='hidden'
+              >
+                <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work3}>
+                  <Box
+                    className='overlay'
+                    pt={{ base: "10px", xl: "350px" }}
+                    pl={{ base: "15px", xl: "60px" }}
+                  >
+                    <Text
+                      fontSize={{ base: "25px", xl: "32px" }}
+                      fontWeight='bold'
+                      lineHeight={{ base: "28px", xl: "30px" }}
+                      color='#ffffff'
+                    >
+                      Bull-Dog Billonaires
+                    </Text>
+
+                    <Box>
+                      <Text
+                        fontSize='18px'
+                        as='em'
+                        lineHeight={{ base: "20px", xl: "30px" }}
+                        color='#ffffff'
+                      >
+                        NFT Platform Monitoring System
+                      </Text>
+                    </Box>
+
+                    <Button
+                      mt={{ base: "12px", xl: "25px" }}
+                      h='45px'
+                      px={{ base: "15px", xl: "45px" }}
+                      colorScheme='purple'
+                    >
+                      View More
+                    </Button>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
           </Flex>
 
-          <Box pb='20px' pt={{ base: "5px", xl: "50px" }}>
-            <Image src={work4} borderRadius='10px' />
+          <Box borderRadius='20px' h={{ base: "190px", xl: "600px" }} w='full' overflow='hidden'>
+            <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work4}>
+              <Box
+                className='overlay'
+                pt={{ base: "40px", xl: "350px" }}
+                pl={{ base: "20px", xl: "60px" }}
+              >
+                <Text
+                  fontSize={{ base: "25px", xl: "32px" }}
+                  fontWeight='bold'
+                  lineHeight={{ base: "28px", xl: "30px" }}
+                  color='#ffffff'
+                >
+                  Bull-Dog Billonaires
+                </Text>
+
+                <Box>
+                  <Text
+                    fontSize='18px'
+                    as='em'
+                    lineHeight={{ base: "20px", xl: "30px" }}
+                    color='#ffffff'
+                  >
+                    NFT Platform Monitoring System
+                  </Text>
+                </Box>
+
+                <Button
+                  mt={{ base: "12px", xl: "25px" }}
+                  h='45px'
+                  px={{ base: "15px", xl: "45px" }}
+                  colorScheme='purple'
+                >
+                  View More
+                </Button>
+              </Box>
+            </Box>
           </Box>
 
           <HStack w='full' justify='flex-end'>

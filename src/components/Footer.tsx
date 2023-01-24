@@ -59,8 +59,16 @@ const Footer = ({
             </Text>
 
             <HStack w={{ base: "full", xl: "350px" }} justify='space-between'>
-              <HStack fontSize='16px'>
-                <Image src={arrow2} />
+              <HStack
+                fontSize='16px'
+                className='hov'
+                _hover={{
+                  transform: "translateX(50px)",
+                  transition: "0.3s ease all",
+                  cursor: "pointer",
+                }}
+              >
+                <Image src={arrow2} w='30px' />
                 <Text color='green'>Drop me a like</Text>
               </HStack>
 
@@ -140,7 +148,7 @@ const Footer = ({
                 </Text>
 
                 <Text as='span' fontSize='13px' color='rgba(255, 255, 255, 0.75)'>
-                  Coded by{" "}
+                  Brought to life by{" "}
                   <Text as='span' color='white' fontWeight='bold'>
                     Seye Alexander{" "}
                   </Text>

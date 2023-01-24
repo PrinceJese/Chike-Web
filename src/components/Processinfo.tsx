@@ -1,9 +1,31 @@
-import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Image,
+  Text,
+  VStack,
+  chakra,
+  shouldForwardProp,
+} from "@chakra-ui/react";
 import arrow1 from "@/assets/processarrow.svg";
 import arrow2 from "@/assets/processarrow2.svg";
-import fileicon from "@/assets/fileicon.svg";
+import React, { useState } from "react";
+import tabs from "@/components/Tabs";
+import { motion, AnimatePresence, isValidMotionProp } from "framer-motion";
 
 const Processinfo = () => {
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
+  const ChakraImg = chakra(motion(Image), {
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
+
+  const ChakraText = chakra(motion(Text), {
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
+
   return (
     <Box>
       <Container maxW={{ base: "6xl", xl: "5xl" }}>
@@ -20,10 +42,12 @@ const Processinfo = () => {
               attention to the target audience, budget, and technical limitations to create a final
               product that is both visually appealing and practical.
             </Text>
+
+            <Text></Text>
           </VStack>
 
           <Flex
-            fontSize='20px'
+            fontSize='19px'
             align='center'
             justify='space-between'
             w='full'
@@ -31,41 +55,39 @@ const Processinfo = () => {
             gap={{ base: "30px", xl: "0px" }}
             direction={{ base: "column", xl: "row" }}
           >
-            <HStack justify='center' p='5px' w='200px' borderRadius='10px' bg='#181823'>
-              <Text>Learn</Text>
-            </HStack>
+            {tabs.map((tab) => (
+              <React.Fragment key={tab.title}>
+                <HStack
+                  justify='center'
+                  p='5px'
+                  minW='130px'
+                  borderRadius='10px'
+                  bg={selectedTab === tab ? "#181823" : ""}
+                  onClick={() => setSelectedTab(tab)}
+                  cursor='pointer'
+                >
+                  <Text>{tab.title}</Text>
+                </HStack>
 
-            <Image
-              src={arrow1}
-              h={{ base: "7px", xl: "initial" }}
-              transform={{ base: "rotate(90deg)", xl: "initial" }}
-            />
+                <Image
+                  display={
+                    tabs.length - 1 == tabs.indexOf(tab) || tab.title == "Design"
+                      ? "none"
+                      : "initial"
+                  }
+                  src={arrow1}
+                  h={{ base: "7px", xl: "initial" }}
+                  transform={{ base: "rotate(90deg)", xl: "initial" }}
+                />
 
-            <Text>Strategise</Text>
-
-            <Image
-              src={arrow1}
-              h={{ base: "7px", xl: "initial" }}
-              transform={{ base: "rotate(90deg)", xl: "initial" }}
-            />
-
-            <Text>Design</Text>
-
-            <Image
-              src={arrow2}
-              h={{ base: "7px", xl: "initial" }}
-              transform={{ base: "rotate(90deg)", xl: "initial" }}
-            />
-
-            <Text>Test & Iterate</Text>
-
-            <Image
-              src={arrow1}
-              h={{ base: "7px", xl: "initial" }}
-              transform={{ base: "rotate(90deg)", xl: "initial" }}
-            />
-
-            <Text>Hand-off</Text>
+                <Image
+                  display={tab.title == "Design" ? "initial" : "none"}
+                  src={arrow2}
+                  h={{ base: "7px", xl: "initial" }}
+                  transform={{ base: "rotate(90deg)", xl: "initial" }}
+                />
+              </React.Fragment>
+            ))}
           </Flex>
 
           <Flex
@@ -75,22 +97,62 @@ const Processinfo = () => {
             pb='100px'
             direction={{ base: "column", xl: "row" }}
           >
-            <Image src={fileicon} w={{ base: "80%", xl: "40%" }} />
+            <AnimatePresence mode='wait'>
+              <ChakraImg
+                key={selectedTab ? selectedTab.title : ""}
+                src={selectedTab ? selectedTab.icon : ""}
+                w={{ base: "80%", xl: "40%" }}
+                initial={{ x: 10, opacity: 0 }}
+                animate={{ x: [0, -25, 10, 0], opacity: 1 }}
+                exit={{ x: -100, opacity: 0 }}
+                // @ts-ignore
+                transition={{ duration: 0.8 }}
+              />
+            </AnimatePresence>
 
             <VStack w={{ base: "90%", xl: "40%" }} spacing='50px'>
-              <Text align='center' fontSize='17px'>
-                “Identifying and defining the problem to be solved is crucial to the success of any
-                project. In this phase, I make sure I understand everything about the company/brand,
-                its market and competitors, the target users and their requirements, and what the
-                real problem to be solved is.”
-              </Text>
+              <ChakraText
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                // @ts-ignore
+                transition={{ duration: 0.9 }}
+                align='center'
+                fontSize='17px'
+              >
+                {selectedTab ? selectedTab.description : ""}
+              </ChakraText>
 
               <VStack spacing='1px' color='rgba(255, 255, 255, 0.75);'>
-                <Text>Market Research</Text>
+                <ChakraText
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  // @ts-ignore
+                  transition={{ duration: 0.9 }}
+                >
+                  {selectedTab ? selectedTab.text : ""}
+                </ChakraText>
 
-                <Text>Competition Analysis</Text>
+                <ChakraText
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  // @ts-ignore
+                  transition={{ duration: 0.9 }}
+                >
+                  {selectedTab ? selectedTab.text2 : ""}
+                </ChakraText>
 
-                <Text>User Persona & Story</Text>
+                <ChakraText
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  // @ts-ignore
+                  transition={{ duration: 0.9 }}
+                >
+                  {selectedTab ? selectedTab.text3 : ""}
+                </ChakraText>
               </VStack>
             </VStack>
           </Flex>

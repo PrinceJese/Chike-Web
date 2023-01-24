@@ -1,37 +1,37 @@
 import { Box, Button, Container, Image, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import pic from "@/assets/work1.png";
+import pic from "@/assets/work1.svg";
 
 const Works = () => {
   return (
     <Container maxW='7xl'>
       <VStack align='flex-start' color='white' py='50px'>
         <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
-          Website Design
+          Projects I have worked on
         </Text>
 
-        <SimpleGrid pt='20px' pb='50px' w='full' columns={{ base: 1, xl: 2 }} spacing='20px'>
+        <SimpleGrid pt='20px' pb='50px' w='full' columns={{ base: 1, xl: 2 }} spacing='30px'>
           <Box>
-            <Image src={pic} />
+            <Image src={pic} borderRadius='20px' />
           </Box>
 
           <Box>
-            <Image src={pic} />
+            <Image src={pic} borderRadius='20px' />
           </Box>
 
           <Box>
-            <Image src={pic} />
+            <Image src={pic} borderRadius='20px' />
           </Box>
 
           <Box>
-            <Image src={pic} />
+            <Image src={pic} borderRadius='20px' />
           </Box>
 
           <Box>
-            <Image src={pic} />
+            <Image src={pic} borderRadius='20px' />
           </Box>
         </SimpleGrid>
 
-        <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
+        {/* <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
           Mobile Design
         </Text>
 
@@ -47,7 +47,7 @@ const Works = () => {
           <Box>
             <Image src={pic} />
           </Box>
-        </SimpleGrid>
+        </SimpleGrid> */}
 
         <Box pb='20px'>
           <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
