@@ -2,7 +2,7 @@ import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chak
 import work2 from "@/assets/frame2.png";
 import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
-import work1 from "@/assets/frame.png";
+import pic from "@/assets/frame.png";
 
 const Jobs = () => {
   return (
@@ -23,7 +23,7 @@ const Jobs = () => {
           </Text>
 
           <Box borderRadius='20px' h={{ base: "190px", xl: "600px" }} w='full' overflow='hidden'>
-            <Box className='card' borderRadius='20px' h='full' w='full' backgroundImage={work1}>
+            <Box className='card' borderRadius='20px' h='full' w='full' backgroundImage={pic}>
               <Box
                 className='overlay'
                 pt={{ base: "40px", xl: "350px" }}
