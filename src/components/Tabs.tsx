@@ -1,8 +1,8 @@
-import learnIcon from "@/assets/fileicon.svg";
-import strategizeIcon from "@/assets/strategyicon.svg";
-import designIcon from "@/assets/designicon.svg";
-import iterateIcon from "@/assets/iterateicon.svg";
-import handoffIcon from "@/assets/handofficon.svg";
+import learnIcon from "@/assets/fileicon.png";
+import strategizeIcon from "@/assets/strategyicon.png";
+import designIcon from "@/assets/designicon.png";
+import iterateIcon from "@/assets/iterateicon.png";
+import handoffIcon from "@/assets/handofficon.png";
 
 const Tabs = [
   {

@@ -1,8 +1,8 @@
 import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import work1 from "@/assets/work1.svg";
-import work2 from "@/assets/work2.svg";
-import work3 from "@/assets/work3.svg";
-import work4 from "@/assets/work4.svg";
+import work1 from "@/assets/Frame.png";
+import work2 from "@/assets/work2.png";
+import work3 from "@/assets/work3.png";
+import work4 from "@/assets/work4.png";
 
 const Works = () => {
   return (
