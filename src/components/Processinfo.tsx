@@ -47,6 +47,7 @@ const Processinfo = () => {
           </VStack>
 
           <Flex
+            display={{ base: "none", xl: "flex" }}
             fontSize='19px'
             align='center'
             justify='space-between'
@@ -91,6 +92,7 @@ const Processinfo = () => {
           </Flex>
 
           <Flex
+            display={{ base: "none", xl: "flex" }}
             align={{ base: "center", xl: "flex-start" }}
             justify='space-between'
             gap={{ base: "50px", xl: "0px" }}

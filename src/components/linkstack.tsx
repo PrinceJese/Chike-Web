@@ -62,7 +62,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
           </DrawerHeader>
 
           <DrawerBody>
-            <VStack align='flex-start' h='full' justify='space-between' py='40px'>
+            <VStack align='flex-start' h='full' justify='space-between'>
               <VStack
                 fontSize='20px'
                 spacing='30px'
@@ -94,7 +94,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                 </Box>
               </VStack>
 
-              <HStack w='full' justify='space-around'>
+              <HStack w='full' justify='space-around' pb='80px'>
                 <Image src={linkedin2} w='25px' />
                 <Image src={twitter2} w='325x' />
                 <Image src={dribble2} w='25px' />
