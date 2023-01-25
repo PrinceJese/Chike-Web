@@ -27,7 +27,7 @@ const Sample = () => {
               <Box
                 className='overlay'
                 pt={{ base: "40px", xl: "350px" }}
-                pl={{ base: "20px", xl: "60px" }}
+                pl={{ base: "21px", xl: "60px" }}
               >
                 <Text
                   fontSize={{ base: "25px", xl: "32px" }}
