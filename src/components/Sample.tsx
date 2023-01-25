@@ -4,7 +4,7 @@ import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
 import frame from "@/assets/frame.png";
 
-const Works = () => {
+const Sample = () => {
   return (
     <Box>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
@@ -217,4 +217,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Sample;
