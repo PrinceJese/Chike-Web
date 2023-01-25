@@ -1,8 +1,8 @@
 import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import work1 from "@/assets/frame.png";
 import work2 from "@/assets/work2.png";
 import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
+import frame from "@/assets/frame.png";
 
 const Works = () => {
   return (
@@ -23,7 +23,7 @@ const Works = () => {
           </Text>
 
           <Box borderRadius='20px' h={{ base: "190px", xl: "600px" }} w='full' overflow='hidden'>
-            <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work1}>
+            <Box className='card' borderRadius='20px' h='full' w='full' backgroundImage={frame}>
               <Box
                 className='overlay'
                 pt={{ base: "40px", xl: "350px" }}
