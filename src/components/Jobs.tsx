@@ -4,7 +4,7 @@ import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
 import frame from "@/assets/frame.png";
 
-const Sample = () => {
+const Jobs = () => {
   return (
     <Box>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
@@ -73,7 +73,7 @@ const Sample = () => {
                   <Box
                     className='overlay'
                     pt={{ base: "25px", xl: "350px" }}
-                    pl={{ base: "15px", xl: "60px" }}
+                    pl={{ base: "16px", xl: "60px" }}
                   >
                     <Text
                       fontSize={{ base: "25px", xl: "32px" }}
@@ -217,4 +217,4 @@ const Sample = () => {
   );
 };
 
-export default Sample;
+export default Jobs;

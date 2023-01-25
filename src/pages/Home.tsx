@@ -1,15 +1,15 @@
 import Feedback from "@/components/Feedback";
 import Herosection from "@/components/Herosection";
+import Jobs from "@/components/Jobs";
 import Process from "@/components/Process";
 import Reach from "@/components/Reach";
-import Sample from "@/components/sample";
 
 const Home = () => {
   return (
     <>
       <Herosection />
       <Process />
-      <Sample />
+      <Jobs />
       <Feedback />
       <Reach />
     </>
