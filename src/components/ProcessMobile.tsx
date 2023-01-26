@@ -14,7 +14,7 @@ const ProcessMobile = () => {
             </Text>
           </Box>
 
-          <Box w='95%' fontSize='22px'>
+          <Box w='90%' fontSize='19px'>
             <Text textAlign='center'>{tab.description}</Text>
           </Box>
 

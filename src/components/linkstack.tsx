@@ -68,6 +68,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                 spacing='30px'
                 align='flex-start'
                 color='rgba(255, 255, 255, 0.85)'
+                pt='20px'
               >
                 <Box onClick={onClose}>
                   <Link to='/about' id='navlink' onClick={handleChange}>

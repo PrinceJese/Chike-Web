@@ -7,6 +7,8 @@ import Works from "@/pages/Works";
 import DesignProcess from "@/pages/DesignProcess";
 import Home from "@/pages/Home";
 import { useState } from "react";
+import TConnect from "./pages/TConnect";
+import Billonaires from "./pages/Billonaires";
 
 const App = () => {
   const [colour, setColour] = useState<string>("black");
@@ -25,11 +27,15 @@ const App = () => {
         <Navbar onLinkClick={handleFooterColour} onHomeClick={handleHomeFooter} />
 
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home onLinkClick={handleFooterColour} />} />
 
-          <Route path='/process' element={<DesignProcess />} />
+          <Route path='/t-connect' element={<TConnect />} />
+
+          <Route path='/bulldog-billonaires' element={<Billonaires />} />
 
           <Route path='/about' element={<AboutMe />} />
+
+          <Route path='/process' element={<DesignProcess />} />
 
           <Route path='/works' element={<Works />} />
         </Routes>

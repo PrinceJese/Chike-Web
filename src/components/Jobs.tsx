@@ -3,8 +3,13 @@ import work2 from "@/assets/frame2.png";
 import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
 import pic from "@/assets/frame.png";
+import { Link } from "react-router-dom";
 
-const Jobs = () => {
+const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
+  const handleChange = (): any => {
+    onLinkClick();
+  };
+
   return (
     <Box>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
@@ -49,14 +54,16 @@ const Jobs = () => {
                   </Text>
                 </Box>
 
-                <Button
-                  mt={{ base: "12px", xl: "25px" }}
-                  h='45px'
-                  px={{ base: "15px", xl: "45px" }}
-                  colorScheme='purple'
-                >
-                  View More
-                </Button>
+                <Link to='/t-connect' onClick={handleChange}>
+                  <Button
+                    mt={{ base: "12px", xl: "25px" }}
+                    h='45px'
+                    px={{ base: "15px", xl: "45px" }}
+                    colorScheme='purple'
+                  >
+                    View More
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>
@@ -72,7 +79,7 @@ const Jobs = () => {
                 <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work2}>
                   <Box
                     className='overlay'
-                    pt={{ base: "25px", xl: "350px" }}
+                    pt={{ base: "15px", xl: "350px" }}
                     pl={{ base: "16px", xl: "60px" }}
                   >
                     <Text
@@ -81,7 +88,7 @@ const Jobs = () => {
                       lineHeight={{ base: "28px", xl: "30px" }}
                       color='#ffffff'
                     >
-                      T-Connect
+                      Bull-Dog Billonaires
                     </Text>
 
                     <Box>
@@ -91,18 +98,20 @@ const Jobs = () => {
                         lineHeight={{ base: "20px", xl: "30px" }}
                         color='#ffffff'
                       >
-                        Leading NFT rent and lease Marketplace
+                        NFT Platform Monitoring System
                       </Text>
                     </Box>
 
-                    <Button
-                      mt={{ base: "12px", xl: "25px" }}
-                      h='45px'
-                      px={{ base: "15px", xl: "45px" }}
-                      colorScheme='purple'
-                    >
-                      View More
-                    </Button>
+                    <Link to='/bulldog-billonaires' onClick={handleChange}>
+                      <Button
+                        mt={{ base: "12px", xl: "25px" }}
+                        h='45px'
+                        px={{ base: "15px", xl: "45px" }}
+                        colorScheme='purple'
+                      >
+                        View More
+                      </Button>
+                    </Link>
                   </Box>
                 </Box>
               </Box>
@@ -127,7 +136,7 @@ const Jobs = () => {
                       lineHeight={{ base: "28px", xl: "30px" }}
                       color='#ffffff'
                     >
-                      Bull-Dog Billonaires
+                      T-Connect
                     </Text>
 
                     <Box>
@@ -137,18 +146,20 @@ const Jobs = () => {
                         lineHeight={{ base: "20px", xl: "30px" }}
                         color='#ffffff'
                       >
-                        NFT Platform Monitoring System
+                        Leading NFT rent and lease Marketplace
                       </Text>
                     </Box>
 
-                    <Button
-                      mt={{ base: "12px", xl: "25px" }}
-                      h='45px'
-                      px={{ base: "15px", xl: "45px" }}
-                      colorScheme='purple'
-                    >
-                      View More
-                    </Button>
+                    <Link to='/t-connect' onClick={handleChange}>
+                      <Button
+                        mt={{ base: "12px", xl: "25px" }}
+                        h='45px'
+                        px={{ base: "15px", xl: "45px" }}
+                        colorScheme='purple'
+                      >
+                        View More
+                      </Button>
+                    </Link>
                   </Box>
                 </Box>
               </Box>
@@ -182,34 +193,38 @@ const Jobs = () => {
                   </Text>
                 </Box>
 
-                <Button
-                  mt={{ base: "12px", xl: "25px" }}
-                  h='45px'
-                  px={{ base: "15px", xl: "45px" }}
-                  colorScheme='purple'
-                >
-                  View More
-                </Button>
+                <Link to='/bulldog-billonaires' onClick={handleChange}>
+                  <Button
+                    mt={{ base: "12px", xl: "25px" }}
+                    h='45px'
+                    px={{ base: "15px", xl: "45px" }}
+                    colorScheme='purple'
+                  >
+                    View More
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>
 
           <HStack w='full' justify='flex-end'>
-            <Button
-              fontSize='11px'
-              fontWeight='bold'
-              borderRadius='1px'
-              bg='black'
-              px='25px'
-              py='10px'
-              border='1px'
-              borderColor='#5221E6'
-              color='#ffffff'
-              _active={{ bgColor: "#5221E6" }}
-              _hover={{ bgColor: "#5221E6" }}
-            >
-              VIEW ALL PROJECTS
-            </Button>
+            <Link to='/works' onClick={handleChange}>
+              <Button
+                fontSize='11px'
+                fontWeight='bold'
+                borderRadius='1px'
+                bg='black'
+                px='25px'
+                py='10px'
+                border='1px'
+                borderColor='#5221E6'
+                color='#ffffff'
+                _active={{ bgColor: "#5221E6" }}
+                _hover={{ bgColor: "#5221E6" }}
+              >
+                VIEW ALL PROJECTS
+              </Button>
+            </Link>
           </HStack>
         </VStack>
       </Container>

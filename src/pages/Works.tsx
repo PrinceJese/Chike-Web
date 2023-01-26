@@ -1,5 +1,7 @@
 import { Box, Button, Container, Image, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import pic from "@/assets/work1.svg";
+import frame from "@/assets/frame.png";
+import work4 from "@/assets/work4.png";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   return (
@@ -10,25 +12,35 @@ const Works = () => {
         </Text>
 
         <SimpleGrid pt='20px' pb='50px' w='full' columns={{ base: 1, xl: 2 }} spacing='30px'>
-          <Box>
-            <Image src={pic} borderRadius='20px' />
-          </Box>
+          <Link to='/t-connect'>
+            <Box className='card'>
+              <Image src={frame} borderRadius='20px' />
+            </Box>
+          </Link>
 
-          <Box>
-            <Image src={pic} borderRadius='20px' />
-          </Box>
+          <Link to='/t-connect'>
+            <Box className='card'>
+              <Image src={frame} borderRadius='20px' />
+            </Box>
+          </Link>
 
-          <Box>
-            <Image src={pic} borderRadius='20px' />
-          </Box>
+          <Link to='/bulldog-billonaires'>
+            <Box className='card'>
+              <Image src={work4} borderRadius='20px' />
+            </Box>
+          </Link>
 
-          <Box>
-            <Image src={pic} borderRadius='20px' />
-          </Box>
+          <Link to='/t-connect'>
+            <Box className='card'>
+              <Image src={frame} borderRadius='20px' />
+            </Box>
+          </Link>
 
-          <Box>
-            <Image src={pic} borderRadius='20px' />
-          </Box>
+          <Link to='/t-connect'>
+            <Box className='card'>
+              <Image src={frame} borderRadius='20px' />
+            </Box>
+          </Link>
         </SimpleGrid>
 
         {/* <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
