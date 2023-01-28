@@ -3,6 +3,8 @@ import processlogo1 from "@/assets/processlogo1.svg";
 import processlogo2 from "@/assets/processlogo2.svg";
 import processlogo3 from "@/assets/processlogo3.svg";
 import processlogo4 from "@/assets/processlogo4.svg";
+import processlogo5 from "@/assets/processlogo5.svg";
+import processlogo6 from "@/assets/processlogo6.svg";
 import icon2 from "@/assets/icon2.svg";
 import icon3 from "@/assets/icon3.svg";
 import icon4 from "@/assets/icon4.svg";
@@ -97,12 +99,40 @@ const Process = () => {
       </Box>
 
       <Box h={{ base: "80px", xl: "20%" }} bg='#000000'>
-        <Container maxW='7xl' h='100%'>
-          <Flex justify='space-around' align='center' w='full' h='full'>
-            <Image src={processlogo1} w={{ base: "35px", xl: "45px" }} />
-            <Image src={processlogo2} w={{ base: "35px", xl: "45px" }} />
-            <Image src={processlogo3} w={{ base: "35px", xl: "45px" }} />
-            <Image src={processlogo4} w={{ base: "35px", xl: "45px" }} />
+        <Container
+          maxW={{ base: "95%", xl: "6xl" }}
+          h='100%'
+          overflow='hidden'
+          position='relative'
+          className='scrolly overflow'
+        >
+          <Flex
+            // gap={{ base: "45px", xl: "175px" }}
+            align='center'
+            w='200%'
+            h='full'
+            className='scrollon'
+            position='absolute'
+            // justify='space-between'
+            // left='0px'
+          >
+            <Flex w='full' justify='space-around'>
+              <Image src={processlogo1} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo2} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo3} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo4} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo5} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo6} w={{ base: "35px", xl: "45px" }} />
+            </Flex>
+
+            <Flex w='full' justify='space-around'>
+              <Image src={processlogo1} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo2} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo3} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo4} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo5} w={{ base: "35px", xl: "45px" }} />
+              <Image src={processlogo6} w={{ base: "35px", xl: "45px" }} />
+            </Flex>
           </Flex>
         </Container>
       </Box>

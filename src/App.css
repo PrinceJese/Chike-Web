@@ -51,6 +51,23 @@ html {
   display: none;
 }
 
+.scrollon {
+  animation: carousel 20s linear infinite;
+  transition: all 20s ease-in-out;
+}
+
+@keyframes carousel {
+  0% {
+    /* transform: translateX(0%); */
+    left: 0%;
+  }
+
+  100% {
+    /* transform: translateX(-100%); */
+    left: -100%;
+  }
+}
+
 #form {
   width: 100%;
 }
