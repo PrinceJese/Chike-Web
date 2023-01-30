@@ -81,14 +81,14 @@ const Herosection = () => {
                 src={colorMode === "light" ? locationDark : location}
                 animate={{ y: [0, -25, 10, -9, 0] }}
                 // @ts-ignore
-                transition={{ duration: 1.2, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               />
 
               <ChakraText
                 color={textColor3}
                 animate={{ y: [0, -25, 10, -9, 0] }}
                 // @ts-ignore
-                transition={{ duration: 1.2, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               >
                 Lagos, Nigeria
               </ChakraText>

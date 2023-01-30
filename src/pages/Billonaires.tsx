@@ -63,7 +63,7 @@ const Billonaires = () => {
             />
           </Box>
         </Flex>
-        <HStack w='full' justify='space-between'>
+        <HStack w='full' justify='space-between' align='flex-start'>
           <Box w='250px'>
             <Text fontSize='19px' fontWeight='bold'>
               Co-contributors

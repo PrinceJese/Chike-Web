@@ -4,6 +4,7 @@ import {
   VStack,
   Text,
   Box,
+  Flex,
   Drawer,
   DrawerBody,
   DrawerHeader,
@@ -13,6 +14,8 @@ import {
   useDisclosure,
   useColorMode,
   useColorModeValue,
+  chakra,
+  shouldForwardProp,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
@@ -24,9 +27,25 @@ import twitter2 from "@/assets/twitter2.svg";
 import dribble2 from "@/assets/dribble2.svg";
 import behance2 from "@/assets/behance2.svg";
 import insta2 from "@/assets/insta2.svg";
-import { useRef } from "react";
+import dayMode from "@/assets/daymode.svg";
+import nightMode from "@/assets/nightmode.svg";
+import { useRef, useState } from "react";
+import { motion, isValidMotionProp } from "framer-motion";
 
 const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(): any }) => {
+  const [isOn, setIsOn] = useState(false);
+  const toggleSwitch = () => setIsOn(!isOn);
+
+  const ChakraBox = chakra(motion(Box), {
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
+
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30,
+  };
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
 
@@ -74,6 +93,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
             <VStack align='flex-start' h='full' justify='space-between'>
               <VStack
                 fontSize='20px'
+                fontWeight='500'
                 spacing='30px'
                 align='flex-start'
                 color={textColor2}
@@ -102,6 +122,41 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                     Contact
                   </Link>
                 </Box>
+
+                <HStack
+                  color={useColorModeValue("blue", "white")}
+                  spacing='15px'
+                  // onClick={toggleColorMode}
+                >
+                  <Text>{colorMode === "light" ? "Night Mode" : "Day Mode"}</Text>
+                  <Image src={colorMode === "light" ? nightMode : dayMode} w='17px' />
+
+                  <Box onClick={toggleColorMode}>
+                    <Flex
+                      className='switch'
+                      w='70px'
+                      h='35px'
+                      bg='rgba(0, 0, 0, 0.75)'
+                      justify='flex-start'
+                      align='center'
+                      borderRadius='50px'
+                      p='3px'
+                      data-isOn={isOn}
+                      onClick={toggleSwitch}
+                    >
+                      <ChakraBox
+                        className='handle'
+                        w='27px'
+                        h='27px'
+                        bg='white'
+                        borderRadius='15px'
+                        layout
+                        // @ts-ignore
+                        transition={spring}
+                      />
+                    </Flex>
+                  </Box>
+                </HStack>
               </VStack>
 
               <HStack w='full' justify='space-around' pb='80px'>

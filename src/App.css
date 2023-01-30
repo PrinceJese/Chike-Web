@@ -72,6 +72,11 @@ html {
   width: 100%;
 }
 
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+  background-color: darkgray;
+}
+
 #footlink:hover {
   color: green;
 }
