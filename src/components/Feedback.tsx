@@ -1,10 +1,15 @@
-import { Box, Container, Flex, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import Comments from "./Comments";
 import arrow from "@/assets/arrow.png";
 
 const Feedback = () => {
+  const textColor = useColorModeValue("white", "black");
+  const textColor2 = useColorModeValue("#8491A0", "rgba(0, 0, 0, 0.75)");
+
+  const bgColor = useColorModeValue("#181823", "#FFF3E4");
+
   return (
-    <Box bg='#FFF3E4' h='100vh'>
+    <Box bg={bgColor} h='100vh'>
       <Container maxW={{ base: "95%", xl: "7xl" }} h='full'>
         <Flex
           w='full'
@@ -14,7 +19,12 @@ const Feedback = () => {
           position={"relative"}
           direction={{ base: "column", xl: "row" }}
         >
-          <VStack w={{ base: "full", xl: "45%" }} align='flex-start' spacing='30px'>
+          <VStack
+            w={{ base: "full", xl: "45%" }}
+            align='flex-start'
+            spacing='30px'
+            color={textColor}
+          >
             <Text
               fontSize='40px'
               fontWeight='bold'
@@ -36,12 +46,13 @@ const Feedback = () => {
             <Text
               fontSize={{ base: "18px", "2xl": "22px" }}
               display={{ base: "none", xl: "block" }}
+              color={textColor2}
             >
               Here are a few lines from clients I have worked within the past <br /> three years of
               my career.
             </Text>
 
-            <Text fontSize='18px' display={{ base: "block", xl: "none" }}>
+            <Text fontSize='18px' display={{ base: "block", xl: "none" }} color={textColor2}>
               Here are a few lines from clients I have worked within the past three years of my
               career.
             </Text>
@@ -53,6 +64,7 @@ const Feedback = () => {
             className='overflow'
             overflowX='hidden'
             mt={{ base: "50px", xl: "0px" }}
+            color={textColor}
           >
             <Comments />
           </VStack>
@@ -72,6 +84,7 @@ const Feedback = () => {
             right={{ base: "-53px", xl: "-20px" }}
             fontSize='10px'
             transform='rotate(90deg)'
+            color={textColor}
           >
             SCROLL DOWN
           </Text>

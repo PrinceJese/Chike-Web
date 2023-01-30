@@ -1,6 +1,17 @@
-import { Box, Container, Flex, Text, Image, HStack, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Text,
+  Image,
+  HStack,
+  VStack,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
+import logoDark from "@/assets/logodark.svg";
 import linkedin2 from "@/assets/linkedin2.svg";
 import twitter2 from "@/assets/twitter2.svg";
 import dribble2 from "@/assets/dribble2.svg";
@@ -27,8 +38,13 @@ const Footer = ({
     onHomeClick();
   };
 
+  const { colorMode } = useColorMode();
+
+  const textColor = useColorModeValue("black", "white");
+  const textColor2 = useColorModeValue("rgba(0, 0, 0, 0.75)", "rgba(255, 255, 255, 0.75)");
+
   return (
-    <Box bg={footerColour}>
+    <Box bg={useColorModeValue("#CACDD0", footerColour)}>
       <Container maxW='8xl'>
         <Flex
           w='full'
@@ -38,22 +54,18 @@ const Footer = ({
         >
           <VStack w={{ base: "full", xl: "50%" }} align='flex-start' spacing='20px'>
             <HStack
-              color='white'
+              color={textColor}
               fontWeight='bold'
               fontSize='18px'
               _hover={{ textDecoration: "none" }}
             >
-              <Image src={logo} />
+              <Image src={colorMode === "light" ? logoDark : logo} />
               <Link to='/' onClick={handleHomeClick}>
                 Ahamefula Ayomide
               </Link>
             </HStack>
 
-            <Text
-              fontSize='17px'
-              w={{ base: "full", xl: "350px" }}
-              color='rgba(255, 255, 255, 0.75)'
-            >
+            <Text fontSize='17px' w={{ base: "full", xl: "350px" }} color={textColor2}>
               I help brands and businesses grow and achieve their goals by designing functional and
               user centric digital products.
             </Text>
@@ -69,10 +81,10 @@ const Footer = ({
                 }}
               >
                 <Image src={arrow2} w='30px' />
-                <Text color='green'>Drop me a like</Text>
+                <Text color={useColorModeValue("blue", "green")}>Drop me a like</Text>
               </HStack>
 
-              <Box color='rgba(255, 255, 255, 0.75)'>
+              <Box color={textColor2}>
                 <Link id='footlink' to='/'>
                   Let's get started
                 </Link>
@@ -94,7 +106,12 @@ const Footer = ({
             w={{ base: "full", xl: "50%" }}
             align='flex-start'
           >
-            <VStack w={{ base: "full", xl: "50%" }} align='flex-start' color='white' spacing='20px'>
+            <VStack
+              w={{ base: "full", xl: "50%" }}
+              align='flex-start'
+              color={textColor}
+              spacing='20px'
+            >
               <Link id='footlink' to='/' onClick={handleHomeClick}>
                 Home
               </Link>
@@ -122,34 +139,30 @@ const Footer = ({
               align='flex-start'
               justify='space-between'
             >
-              <VStack h='full' align='flex-start' spacing='20px' color='white'>
+              <VStack h='full' align='flex-start' spacing='20px' color={textColor}>
                 <HStack>
                   <Image src={mail} />
-                  <Text fontSize='16px' color='white'>
-                    ahamefulaayomide@gmail.com
-                  </Text>
+                  <Text fontSize='16px'>ahamefulaayomide@gmail.com</Text>
                 </HStack>
 
                 <HStack>
                   <Image src={call} />
-                  <Text fontSize='16px' color='white'>
-                    +234 708 430 9966
-                  </Text>
+                  <Text fontSize='16px'>+234 708 430 9966</Text>
                 </HStack>
               </VStack>
 
-              <VStack align='flex-start' pt='20px'>
-                <Text as='span' fontSize='13px' color='rgba(255, 255, 255, 0.75)'>
+              <VStack align='flex-start' pt='20px' color={textColor2}>
+                <Text as='span' fontSize='13px'>
                   Designed by{" "}
-                  <Text as='span' color='white' fontWeight='bold'>
+                  <Text as='span' color={textColor} fontWeight='bold'>
                     Ahamefula Ayomide{" "}
                   </Text>
                   &copy; 2023
                 </Text>
 
-                <Text as='span' fontSize='13px' color='rgba(255, 255, 255, 0.75)'>
+                <Text as='span' fontSize='13px'>
                   Brought to life by{" "}
-                  <Text as='span' color='white' fontWeight='bold'>
+                  <Text as='span' color={textColor} fontWeight='bold'>
                     Seye Alexander{" "}
                   </Text>
                   &copy; 2023

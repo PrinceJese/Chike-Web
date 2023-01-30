@@ -11,42 +11,41 @@ import {
   VStack,
   Button,
   Textarea,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import call from "@/assets/call.svg";
 import mail from "@/assets/mail.svg";
 
 const Reach = () => {
+  const textColor = useColorModeValue("black", "white");
+  const textColor2 = useColorModeValue("rgba(0, 0, 0, 0.75)", "rgba(255, 255, 255, 0.75)");
+  // "#8491A0"
+
+  const bgColor = useColorModeValue("#FFF3E4", "linear-gradient(90deg, #181823 59%, #000000 41%)");
+
   return (
-    <Box id='hero'>
+    <Box bg={bgColor}>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='reach'>
         <Flex w='full' py={{ base: "70px", xl: "100px" }} direction={{ base: "column", xl: "row" }}>
           <VStack w={{ base: "full", xl: "55%" }} spacing='20px' align='flex-start'>
-            <Text fontSize={{ base: "35px", xl: "40px" }} fontWeight='bold' color='#ffffff'>
+            <Text fontSize={{ base: "35px", xl: "40px" }} fontWeight='bold' color={textColor}>
               Wanna get Started?
             </Text>
 
-            <Text
-              w={{ base: "full", xl: "400px" }}
-              fontSize='17px'
-              color='rgba(255, 255, 255, 0.75);'
-            >
+            <Text w={{ base: "full", xl: "400px" }} fontSize='17px' color={textColor2}>
               Are you are looking to hire a product designer? Or are you looking to collaborate on a
               project? Drop me a message and I’ll get back to you ASAP!
             </Text>
 
-            <VStack pt='20px' align='flex-start'>
+            <VStack pt='20px' align='flex-start' color={textColor2}>
               <HStack>
                 <Image src={mail} />
-                <Text color='#8491A0' fontSize='17px'>
-                  ahamefulaayomide@gmail.com
-                </Text>
+                <Text fontSize='17px'>ahamefulaayomide@gmail.com</Text>
               </HStack>
 
               <HStack>
                 <Image src={call} />
-                <Text color='#8491A0' fontSize='17px'>
-                  +234 708 430 9966
-                </Text>
+                <Text fontSize='17px'>+234 708 430 9966</Text>
               </HStack>
             </VStack>
           </VStack>
@@ -55,7 +54,7 @@ const Reach = () => {
             w={{ base: "full", xl: "45%" }}
             mt={{ base: "50px", xl: "0px" }}
             // align='flex-start'
-            color='white'
+            color={textColor}
           >
             <form id='form'>
               <FormControl pb='50px'>

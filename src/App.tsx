@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <Router>
-      <Box bg='#000000'>
+      <Box bg='black'>
         <Navbar onLinkClick={handleFooterColour} onHomeClick={handleHomeFooter} />
 
         <Routes>

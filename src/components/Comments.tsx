@@ -11,6 +11,7 @@ const Comments = () => {
         w='90%'
         border='1px'
         borderRadius='5px'
+        borderColor='#5B6876'
         align='flex-start'
         spacing='35px'
       >
@@ -41,6 +42,7 @@ const Comments = () => {
         w='90%'
         border='1px'
         borderRadius='5px'
+        borderColor='#5B6876'
         align='flex-start'
         spacing='35px'
       >
@@ -71,6 +73,7 @@ const Comments = () => {
         w='90%'
         border='1px'
         borderRadius='5px'
+        borderColor='#5B6876'
         align='flex-start'
         spacing='35px'
       >
@@ -101,6 +104,7 @@ const Comments = () => {
         w='90%'
         border='1px'
         borderRadius='5px'
+        borderColor='#5B6876'
         align='flex-start'
         spacing='35px'
       >
@@ -131,6 +135,7 @@ const Comments = () => {
         w='90%'
         border='1px'
         borderRadius='5px'
+        borderColor='#5B6876'
         align='flex-start'
         spacing='35px'
       >

@@ -1,9 +1,23 @@
-import { Box, Container, HStack, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  HStack,
+  Image,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
+import logoDark from "@/assets/logodark.svg";
 import Linkstack from "./linkstack";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(): any }) => {
+  const { toggleColorMode, colorMode } = useColorMode();
+
+  const textColor = useColorModeValue("black", "white");
+  const bgColor = useColorModeValue("#FFF3E4", "#000000");
+
   const handleChange = (): any => {
     onLinkClick();
   };
@@ -13,15 +27,18 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
   };
 
   return (
-    <Box bg='#000000' p={0}>
+    <Box bgColor={bgColor} p={0}>
       <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
             <Link onClick={handleHomeClick} to='/'>
               <HStack>
-                <Image src={logo} w={{ base: "23px", xl: "initial" }} />
+                <Image
+                  src={colorMode === "light" ? logoDark : logo}
+                  w={{ base: "23px", xl: "initial" }}
+                />
 
-                <Text color='white' fontWeight='bold' fontSize='18px'>
+                <Text color={textColor} fontWeight='bold' fontSize='18px'>
                   Ahamefula Ayomide
                 </Text>
               </HStack>
@@ -30,7 +47,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
 
           <HStack
             w='50%'
-            color='rgba(255, 255, 255, 0.85);'
+            color={useColorModeValue("black", "rgba(255, 255, 255, 0.85);")}
             justify='space-between'
             pl='100px'
             display={{ base: "none", xl: "flex" }}
@@ -59,6 +76,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
               borderColor='peach'
               borderRadius='50%'
               bg='linear-gradient(90deg, white 50%, black 50%)'
+              onClick={toggleColorMode}
             ></Box>
           </HStack>
 

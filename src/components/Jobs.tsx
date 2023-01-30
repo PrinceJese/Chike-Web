@@ -1,4 +1,14 @@
-import { Box, Button, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  HStack,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import work2 from "@/assets/frame2.png";
 import work3 from "@/assets/work3.png";
 import work4 from "@/assets/work4.png";
@@ -6,12 +16,15 @@ import pic from "@/assets/frame.png";
 import { Link } from "react-router-dom";
 
 const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
+  const textColor = useColorModeValue("black", "white");
+  const bgColor = useColorModeValue("#FFF3E4", "black");
+
   const handleChange = (): any => {
     onLinkClick();
   };
 
   return (
-    <Box>
+    <Box bg={bgColor}>
       <Container maxW={{ base: "95%", xl: "7xl" }} id='works'>
         <VStack align='flex-start' py='80px' w='full' spacing={{ base: "20px", xl: "50px" }}>
           <Text fontSize='16px' fontWeight='bold' color='#8491A0'>
@@ -20,7 +33,7 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
 
           <Text
             fontSize={{ base: "25px", xl: "35px" }}
-            color='#ffffff'
+            color={textColor}
             fontWeight='bold'
             lineHeight='30px'
           >

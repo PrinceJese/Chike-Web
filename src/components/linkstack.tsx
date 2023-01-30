@@ -11,10 +11,14 @@ import {
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
+import logoDark from "@/assets/logodark.svg";
 import menu from "@/assets/menu.svg";
+import menu2 from "@/assets/menuu.svg";
 import linkedin2 from "@/assets/linkedin2.svg";
 import twitter2 from "@/assets/twitter2.svg";
 import dribble2 from "@/assets/dribble2.svg";
@@ -26,6 +30,11 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
 
+  const { toggleColorMode, colorMode } = useColorMode();
+  const bgColor = useColorModeValue("#FFF3E4", "black");
+  const textColor = useColorModeValue("black", "white");
+  const textColor2 = useColorModeValue("black", "rgba(255, 255, 255, 0.85)");
+
   const handleChange = (): any => {
     onLinkClick();
   };
@@ -36,7 +45,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
 
   return (
     <HStack display={{ base: "flex", xl: "none" }}>
-      <Image ref={btnRef} onClick={onOpen} src={menu} />
+      <Image ref={btnRef} onClick={onOpen} src={colorMode === "light" ? menu2 : menu} />
 
       <Drawer
         isOpen={isOpen}
@@ -46,14 +55,14 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
         size='full'
       >
         <DrawerOverlay />
-        <DrawerContent bg='black'>
-          <DrawerCloseButton mt='10px' w='30px' border='0px' bg='none' color='white' />
+        <DrawerContent bg={bgColor}>
+          <DrawerCloseButton mt='10px' w='30px' border='0px' bg='none' color={textColor} />
           <DrawerHeader>
             <Box onClick={onClose}>
               <Link to='/' onClick={handleHomeClick}>
                 <HStack>
-                  <Image src={logo} w='20px' />
-                  <Text color='white' fontSize='18px' fontWeight='bold'>
+                  <Image src={colorMode === "light" ? logoDark : logo} w='20px' />
+                  <Text color={textColor} fontSize='18px' fontWeight='bold'>
                     Ahamefula Ayomide
                   </Text>
                 </HStack>
@@ -67,7 +76,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                 fontSize='20px'
                 spacing='30px'
                 align='flex-start'
-                color='rgba(255, 255, 255, 0.85)'
+                color={textColor2}
                 pt='20px'
               >
                 <Box onClick={onClose}>
