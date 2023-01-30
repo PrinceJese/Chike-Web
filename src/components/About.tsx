@@ -1,10 +1,16 @@
-import { Box, Button, Container, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 
 const About = () => {
+  const textColor = useColorModeValue("black", "white");
+
+  const bgColor = useColorModeValue(
+    "linear-gradient(90deg, #181823 50%, #FFF3E4 50%)",
+    "linear-gradient(90deg, #181823 50%, #000000 50%)"
+  );
   return (
-    <Box bg={{ base: "initial", xl: "linear-gradient(90deg, #181823 50%, #000000 50%)" }}>
+    <Box bg={{ base: "initial", xl: bgColor }}>
       <Container maxW='7xl'>
-        <Flex direction={{ base: "column", xl: "row" }} w='full' color='white'>
+        <Flex direction={{ base: "column", xl: "row" }} w='full' color={textColor}>
           <VStack
             w={{ base: "full", xl: "50%" }}
             h={{ base: "470px", xl: "initial" }}
@@ -55,6 +61,7 @@ const About = () => {
               borderRadius='2px'
               _active={{ bgColor: "#9d9d9d92" }}
               _hover={{ bgColor: "#9d9d9dc0" }}
+              h='50px'
             >
               RESUME
             </Button>

@@ -8,15 +8,23 @@ import {
   VStack,
   chakra,
   shouldForwardProp,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import arrow1 from "@/assets/processarrow.svg";
 import arrow2 from "@/assets/processarrow2.svg";
+import arrowDark1 from "@/assets/arrowdark1.svg";
+import arrowDark2 from "@/assets/arrowdark2.svg";
 import React, { useState } from "react";
 import tabs from "@/components/Tabs";
 import { motion, AnimatePresence, isValidMotionProp } from "framer-motion";
 
 const Processinfo = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
+  const { colorMode } = useColorMode();
+  const textColor = useColorModeValue("black", "white");
+  const textColor2 = useColorModeValue("rgba(0, 0, 0, 0.75)", "rgba(255, 255, 255, 0.75)");
 
   const ChakraImg = chakra(motion(Image), {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -29,8 +37,8 @@ const Processinfo = () => {
   return (
     <Box>
       <Container maxW={{ base: "6xl", xl: "5xl" }}>
-        <VStack py='50px' spacing='80px' color='white'>
-          <VStack w={{ base: "95%", xl: "4xl" }} color='white' spacing='30px'>
+        <VStack py='50px' spacing='80px' color={textColor}>
+          <VStack w={{ base: "95%", xl: "4xl" }} spacing='30px'>
             <Text fontSize='35px' align='center'>
               My Design Process
             </Text>
@@ -52,7 +60,7 @@ const Processinfo = () => {
             align='center'
             justify='space-between'
             w='full'
-            color='rgba(255, 255, 255, 0.75);'
+            color={textColor2}
             gap={{ base: "30px", xl: "0px" }}
             direction={{ base: "column", xl: "row" }}
           >
@@ -63,9 +71,11 @@ const Processinfo = () => {
                   p='5px'
                   minW='130px'
                   borderRadius='10px'
+                  fontWeight='500'
                   bg={selectedTab === tab ? "#181823" : ""}
                   onClick={() => setSelectedTab(tab)}
                   cursor='pointer'
+                  color={selectedTab === tab ? "white" : textColor2}
                 >
                   <Text>{tab.title}</Text>
                 </HStack>
@@ -76,14 +86,14 @@ const Processinfo = () => {
                       ? "none"
                       : "initial"
                   }
-                  src={arrow1}
+                  src={colorMode === "light" ? arrowDark1 : arrow1}
                   h={{ base: "7px", xl: "initial" }}
                   transform={{ base: "rotate(90deg)", xl: "initial" }}
                 />
 
                 <Image
                   display={tab.title == "Design" ? "initial" : "none"}
-                  src={arrow2}
+                  src={colorMode === "light" ? arrowDark2 : arrow2}
                   h={{ base: "7px", xl: "initial" }}
                   transform={{ base: "rotate(90deg)", xl: "initial" }}
                 />
@@ -125,7 +135,7 @@ const Processinfo = () => {
                 {selectedTab ? selectedTab.description : ""}
               </ChakraText>
 
-              <VStack spacing='1px' color='rgba(255, 255, 255, 0.75);'>
+              <VStack spacing='1px' color={textColor2}>
                 <ChakraText
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}

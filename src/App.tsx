@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,6 +11,8 @@ import TConnect from "./pages/TConnect";
 import Billonaires from "./pages/Billonaires";
 
 const App = () => {
+  const bgColor = useColorModeValue("#FFF3E4", "#000000");
+
   const [colour, setColour] = useState<string>("black");
 
   const handleFooterColour = (): any => {
@@ -23,7 +25,7 @@ const App = () => {
 
   return (
     <Router>
-      <Box bg='black'>
+      <Box bg={bgColor}>
         <Navbar onLinkClick={handleFooterColour} onHomeClick={handleHomeFooter} />
 
         <Routes>

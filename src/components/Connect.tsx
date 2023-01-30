@@ -1,11 +1,13 @@
-import { Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import linkedin from "@/assets/linkedin.svg";
-import twitter from "@/assets/twitter.svg";
-import dribble from "@/assets/dribble.svg";
-import behance from "@/assets/behance.svg";
-import insta from "@/assets/insta.svg";
+import { Container, Flex, HStack, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import linkedin2 from "@/assets/linkedin2.svg";
+import twitter2 from "@/assets/twitter2.svg";
+import dribble2 from "@/assets/dribble2.svg";
+import behance2 from "@/assets/behance2.svg";
+import insta2 from "@/assets/insta2.svg";
 
 const Connect = () => {
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW='7xl'>
       <Flex
@@ -18,7 +20,7 @@ const Connect = () => {
       >
         <VStack w={{ base: "full", xl: "30%" }} align='flex-start'>
           <Text
-            color='white'
+            color={textColor}
             align={{ base: "center", xl: "initial" }}
             fontSize={{ base: "25px", xl: "33px" }}
             fontWeight='bold'
@@ -30,14 +32,14 @@ const Connect = () => {
 
         <VStack w={{ base: "full", xl: "50%" }} spacing={{ base: "30px", xl: "70px" }}>
           <HStack spacing={{ base: "50px", xl: "70px" }}>
-            <Image src={dribble} w={{ base: "75px", xl: "initial" }} />
-            <Image src={twitter} w={{ base: "75px", xl: "initial" }} />
-            <Image src={behance} w={{ base: "75px", xl: "initial" }} />
+            <Image src={dribble2} w={{ base: "75px", xl: "90px" }} />
+            <Image src={twitter2} w={{ base: "75px", xl: "90px" }} />
+            <Image src={behance2} w={{ base: "75px", xl: "90px" }} />
           </HStack>
 
           <HStack spacing={{ base: "50px", xl: "70px" }}>
-            <Image src={linkedin} w={{ base: "75px", xl: "initial" }} />
-            <Image src={insta} w={{ base: "75px", xl: "initial" }} />
+            <Image src={linkedin2} w={{ base: "75px", xl: "90px" }} />
+            <Image src={insta2} w={{ base: "75px", xl: "90px" }} />
           </HStack>
         </VStack>
       </Flex>

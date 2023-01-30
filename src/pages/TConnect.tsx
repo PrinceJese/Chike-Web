@@ -1,4 +1,13 @@
-import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import pic from "@/assets/frame.png";
 import phone1 from "@/assets/phone1.png";
 import phone2 from "@/assets/phone2.png";
@@ -14,10 +23,12 @@ import design3 from "@/assets/design3.png";
 import design4 from "@/assets/design4.png";
 
 const TConnect = () => {
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW={{ base: "95%", xl: "6xl" }}>
       <VStack
-        color='#ffffff;'
+        color={textColor}
         spacing='50px'
         align='flex-start'
         pt={{ base: "10px", xl: "40px" }}
@@ -32,7 +43,7 @@ const TConnect = () => {
           gap={{ base: "15px", xl: "0px" }}
         >
           <VStack w={{ base: "full", xl: "20%" }} spacing='10px' align='flex-start'>
-            <Text color='white' fontSize='40px' fontWeight='bold'>
+            <Text fontSize='40px' fontWeight='bold'>
               T-Connect
             </Text>
 
@@ -53,7 +64,7 @@ const TConnect = () => {
         </Flex>
         <HStack w='full' justify='space-between'>
           <Box w='250px'>
-            <Text color='white' fontSize='19px' fontWeight='bold'>
+            <Text fontSize='19px' fontWeight='bold'>
               Co-contributors
             </Text>
 
@@ -61,7 +72,7 @@ const TConnect = () => {
           </Box>
 
           <Box w='250px'>
-            <Text color='white' fontSize='19px' fontWeight='bold'>
+            <Text fontSize='19px' fontWeight='bold'>
               My role(s)
             </Text>
 
@@ -70,7 +81,7 @@ const TConnect = () => {
         </HStack>
 
         <VStack align='flex-start' pt='70px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             An Overview
           </Text>
 
@@ -84,7 +95,7 @@ const TConnect = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Problem(s) to be solved
           </Text>
 
@@ -98,7 +109,7 @@ const TConnect = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Defining Objectives
           </Text>
 
@@ -107,7 +118,7 @@ const TConnect = () => {
             arrived at and divided into four main parts.
           </Text>
 
-          <VStack color='white' align='flex-start' fontSize='16px'>
+          <VStack align='flex-start' fontSize='16px'>
             <Text as='li'>Transparent and trustable platform</Text>
             <Text as='li'>User friendly and accessible Interface</Text>
             <Text as='li'>Block chain payment incorporation</Text>
@@ -116,7 +127,7 @@ const TConnect = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Process
           </Text>
 
@@ -129,7 +140,7 @@ const TConnect = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Design System
           </Text>
 
@@ -169,7 +180,7 @@ const TConnect = () => {
         </Flex>
 
         <VStack align='flex-start' pt='10px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Landing page
           </Text>
 
@@ -185,7 +196,7 @@ const TConnect = () => {
         </Flex>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='18px' fontWeight='bold'>
+          <Text fontSize='18px' fontWeight='bold'>
             Understanding features of the landing page
           </Text>
 
@@ -198,7 +209,7 @@ const TConnect = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Dashboard
           </Text>
 
@@ -213,7 +224,7 @@ const TConnect = () => {
         </Flex>
 
         <VStack align='flex-start' pt='10px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Admin section
           </Text>
 
@@ -240,7 +251,7 @@ const TConnect = () => {
         </Flex>
 
         <VStack align='flex-start' pt='10px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Responsiveness
           </Text>
 
@@ -265,7 +276,7 @@ const TConnect = () => {
         </Flex>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Conclusion
           </Text>
 

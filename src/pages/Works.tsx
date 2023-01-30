@@ -1,12 +1,23 @@
-import { Box, Button, Container, Image, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Image,
+  SimpleGrid,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import frame from "@/assets/frame.png";
 import work4 from "@/assets/work4.png";
 import { Link } from "react-router-dom";
 
 const Works = () => {
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW='7xl'>
-      <VStack align='flex-start' color='white' py='50px'>
+      <VStack align='flex-start' color={textColor} py='50px'>
         <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
           Projects I have worked on
         </Text>

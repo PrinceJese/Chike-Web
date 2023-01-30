@@ -1,10 +1,17 @@
-import { Box, Container, Flex, VStack, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, VStack, Text, useColorModeValue } from "@chakra-ui/react";
 
 const Brands = () => {
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW='7xl'>
       <Flex align='center' w='full' py={{ base: "50px", xl: "110px" }}>
-        <VStack align='flex-start' w='full' color='#ffffff' spacing={{ base: "50px", xl: "70px" }}>
+        <VStack
+          align='flex-start'
+          w='full'
+          color={textColor}
+          spacing={{ base: "50px", xl: "70px" }}
+        >
           <VStack align='flex-start'>
             <Text fontSize='16px' fontWeight='bold' color='#8491A0'>
               Work Experience

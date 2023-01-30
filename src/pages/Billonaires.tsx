@@ -1,11 +1,19 @@
-import { Box, Container, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Image,
+  Text,
+  VStack,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import arrow1 from "@/assets/processarrow.svg";
 import arrow2 from "@/assets/processarrow2.svg";
+import arrowDark1 from "@/assets/arrowdark1.svg";
+import arrowDark2 from "@/assets/arrowdark2.svg";
 import work4 from "@/assets/work4.png";
-import design1 from "@/assets/design1.png";
-import design2 from "@/assets/design2.png";
-import design3 from "@/assets/design3.png";
-import design4 from "@/assets/design4.png";
 import bulldog1 from "@/assets/bulldog1.png";
 import bulldog2 from "@/assets/bulldog2.png";
 import bulldog3 from "@/assets/bulldog3.png";
@@ -15,10 +23,13 @@ import bulldog6 from "@/assets/bulldog6.png";
 import tabs from "@/components/Tabs";
 
 const Billonaires = () => {
+  const { colorMode } = useColorMode();
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW={{ base: "95%", xl: "6xl" }}>
       <VStack
-        color='#ffffff;'
+        color={textColor}
         spacing='50px'
         align='flex-start'
         pt={{ base: "10px", xl: "40px" }}
@@ -33,7 +44,7 @@ const Billonaires = () => {
           gap={{ base: "15px", xl: "0px" }}
         >
           <VStack w={{ base: "full", xl: "20%" }} spacing='10px' align='flex-start'>
-            <Text color='white' fontSize='40px' fontWeight='bold' lineHeight='40px'>
+            <Text fontSize='40px' fontWeight='bold' lineHeight='40px'>
               Bull-Dog Billonaires
             </Text>
 
@@ -54,7 +65,7 @@ const Billonaires = () => {
         </Flex>
         <HStack w='full' justify='space-between'>
           <Box w='250px'>
-            <Text color='white' fontSize='19px' fontWeight='bold'>
+            <Text fontSize='19px' fontWeight='bold'>
               Co-contributors
             </Text>
 
@@ -62,7 +73,7 @@ const Billonaires = () => {
           </Box>
 
           <Box w='250px'>
-            <Text color='white' fontSize='19px' fontWeight='bold'>
+            <Text fontSize='19px' fontWeight='bold'>
               My role(s)
             </Text>
 
@@ -71,7 +82,7 @@ const Billonaires = () => {
         </HStack>
 
         <VStack align='flex-start' pt='70px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             An Overview
           </Text>
 
@@ -85,7 +96,7 @@ const Billonaires = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Problem(s) to be solved
           </Text>
 
@@ -98,7 +109,7 @@ const Billonaires = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Defining Objectives
           </Text>
 
@@ -107,7 +118,7 @@ const Billonaires = () => {
             were itemized.
           </Text>
 
-          <VStack color='white' align='flex-start' fontSize='16px'>
+          <VStack align='flex-start' fontSize='16px'>
             <Text as='li'>User friendly and accessible Interface</Text>
             <Text as='li'>
               Monitoring Dashboard with required information ( transaction history, price changes,
@@ -117,7 +128,7 @@ const Billonaires = () => {
         </VStack>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Process
           </Text>
 
@@ -145,11 +156,11 @@ const Billonaires = () => {
                       : "initial"
                   }
                 >
-                  <Image src={arrow1} w='200px' />
+                  <Image src={colorMode === "light" ? arrowDark1 : arrow1} w='200px' />
                 </VStack>
 
                 <VStack display={tab.title == "Design" ? "initial" : "none"}>
-                  <Image src={arrow2} w='200px' />
+                  <Image src={colorMode === "light" ? arrowDark2 : arrow2} w='200px' />
                 </VStack>
               </HStack>
             ))}
@@ -157,7 +168,7 @@ const Billonaires = () => {
         </Flex>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Design System
           </Text>
 
@@ -189,7 +200,7 @@ const Billonaires = () => {
         </Flex>
 
         <VStack align='flex-start' pt='20px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             The Dashboard
           </Text>
 
@@ -205,7 +216,7 @@ const Billonaires = () => {
         </Flex>
 
         <VStack align='flex-start'>
-          <Text color='white' fontSize='18px' fontWeight='bold'>
+          <Text fontSize='18px' fontWeight='bold'>
             Understanding features of the dashboard
           </Text>
 
@@ -217,7 +228,7 @@ const Billonaires = () => {
         </VStack>
 
         <VStack align='flex-start' pt='20px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Activity screens
           </Text>
 
@@ -236,7 +247,7 @@ const Billonaires = () => {
         </Flex>
 
         <VStack align='flex-start' pt='20px'>
-          <Text color='white' fontSize='22px' fontWeight='bold'>
+          <Text fontSize='22px' fontWeight='bold'>
             Conclusion
           </Text>
 

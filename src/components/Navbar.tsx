@@ -17,6 +17,10 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
 
   const textColor = useColorModeValue("black", "white");
   const bgColor = useColorModeValue("#FFF3E4", "#000000");
+  const toggleColor = useColorModeValue(
+    "linear-gradient(90deg, white 50%, black 50%)",
+    "linear-gradient(90deg, black 50%, white 50%)"
+  );
 
   const handleChange = (): any => {
     onLinkClick();
@@ -52,6 +56,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             pl='100px'
             display={{ base: "none", xl: "flex" }}
             fontSize='15px'
+            fontWeight='500'
           >
             <Link id='navlink' to='/about' onClick={handleChange}>
               About
@@ -75,7 +80,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
               border='2px'
               borderColor='peach'
               borderRadius='50%'
-              bg='linear-gradient(90deg, white 50%, black 50%)'
+              bg={toggleColor}
               onClick={toggleColorMode}
             ></Box>
           </HStack>
