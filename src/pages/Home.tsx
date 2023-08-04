@@ -1,16 +1,16 @@
-import Feedback from "@/components/Feedback";
-import Herosection from "@/components/Herosection";
-import IconStack from "@/components/IconStack";
-import Jobs from "@/components/Jobs";
-import Process from "@/components/Process";
-import Reach from "@/components/Reach";
+import Feedback from "@/components/home/Feedback";
+import Herosection from "@/components/home/Herosection";
+import IconStack from "@/components/home/IconStack";
+import Jobs from "@/components/home/Jobs";
+import Process from "@/components/process/Process";
+import Reach from "@/components/home/Reach";
 
 const Home = ({ onLinkClick }: { onLinkClick(): any }) => {
   return (
     <>
       <Herosection />
       <Process />
-      <IconStack />
+      {/* <IconStack /> */}
       <Jobs onLinkClick={onLinkClick} />
       <Feedback />
       <Reach />

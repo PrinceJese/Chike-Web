@@ -16,7 +16,7 @@ import arrow2 from "@/assets/processarrow2.svg";
 import arrowDark1 from "@/assets/arrowdark1.svg";
 import arrowDark2 from "@/assets/arrowdark2.svg";
 import React, { useState } from "react";
-import tabs from "@/components/Tabs";
+import tabs from "@/components/process/Tabs";
 import { motion, AnimatePresence, isValidMotionProp } from "framer-motion";
 
 const Processinfo = () => {

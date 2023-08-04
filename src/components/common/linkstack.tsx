@@ -81,7 +81,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
               <Link to='/' onClick={handleHomeClick}>
                 <HStack>
                   <Image src={colorMode === "light" ? logoDark : logo} w='20px' />
-                  <Text color={textColor} fontSize='18px' fontWeight='bold'>
+                  <Text color={textColor} fontSize='22px' fontWeight='bold'>
                     Ahamefula Ayomide
                   </Text>
                 </HStack>
@@ -92,9 +92,9 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
           <DrawerBody>
             <VStack align='flex-start' h='full' justify='space-between'>
               <VStack
-                fontSize='20px'
-                fontWeight='500'
-                spacing='30px'
+                fontSize='18px'
+                fontWeight='600'
+                spacing='20px'
                 align='flex-start'
                 color={textColor2}
                 pt='20px'
@@ -159,7 +159,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                 </HStack>
               </VStack>
 
-              <HStack w='full' justify='space-around' pb='80px'>
+              <HStack w='full' justify='space-around' pb='100px'>
                 <Image src={linkedin2} w='25px' />
                 <Image src={twitter2} w='325x' />
                 <Image src={dribble2} w='25px' />

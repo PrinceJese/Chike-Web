@@ -55,7 +55,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             justify='space-between'
             pl='100px'
             display={{ base: "none", xl: "flex" }}
-            fontSize='15px'
+            fontSize='16px'
             fontWeight='500'
           >
             <Link id='navlink' to='/about' onClick={handleChange}>

@@ -4,14 +4,13 @@ import {
   Container,
   Flex,
   HStack,
-  Image,
   Text,
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
 import work2 from "@/assets/frame2.png";
-import work3 from "@/assets/work3.png";
-import work4 from "@/assets/work4.png";
+import flight from "@/assets/flight.png";
+import piazza from "@/assets/piazza.png";
 import pic from "@/assets/frame.png";
 import { Link } from "react-router-dom";
 
@@ -137,7 +136,7 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                 w='full'
                 overflow='hidden'
               >
-                <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work3}>
+                <Box className='card' borderRadius='20px' h='full' w='full' bgImg={flight}>
                   <Box
                     className='overlay'
                     pt={{ base: "10px", xl: "350px" }}
@@ -149,7 +148,7 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                       lineHeight={{ base: "28px", xl: "30px" }}
                       color='#ffffff'
                     >
-                      T-Connect
+                      Flyair
                     </Text>
 
                     <Box>
@@ -159,11 +158,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                         lineHeight={{ base: "20px", xl: "30px" }}
                         color='#ffffff'
                       >
-                        Leading NFT rent and lease Marketplace
+                        Flight booking platform
                       </Text>
                     </Box>
 
-                    <Link to='/t-connect' onClick={handleChange}>
+                    <Link to='/fly-air' onClick={handleChange}>
                       <Button
                         mt={{ base: "12px", xl: "25px" }}
                         h='45px'
@@ -180,7 +179,7 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
           </Flex>
 
           <Box borderRadius='20px' h={{ base: "190px", xl: "600px" }} w='full' overflow='hidden'>
-            <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work4}>
+            <Box className='card' borderRadius='20px' h='full' w='full' bgImg={piazza}>
               <Box
                 className='overlay'
                 pt={{ base: "40px", xl: "350px" }}
@@ -192,7 +191,7 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                   lineHeight={{ base: "28px", xl: "30px" }}
                   color='#ffffff'
                 >
-                  Bull-Dog Billonaires
+                  Stylist Piazza
                 </Text>
 
                 <Box>
@@ -202,11 +201,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                     lineHeight={{ base: "20px", xl: "30px" }}
                     color='#ffffff'
                   >
-                    NFT Platform Monitoring System
+                    Beauty & Lifestyle
                   </Text>
                 </Box>
 
-                <Link to='/bulldog-billonaires' onClick={handleChange}>
+                <Link to='/piaza' onClick={handleChange}>
                   <Button
                     mt={{ base: "12px", xl: "25px" }}
                     h='45px'

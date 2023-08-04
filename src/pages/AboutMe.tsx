@@ -1,6 +1,6 @@
-import About from "@/components/About";
-import Brands from "@/components/Brands";
-import Connect from "@/components/Connect";
+import About from "@/components/home/About";
+import Brands from "@/components/home/Brands";
+import Connect from "@/components/home/Connect";
 
 const AboutMe = () => {
   return (

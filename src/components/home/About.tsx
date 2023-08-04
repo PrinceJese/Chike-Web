@@ -1,4 +1,14 @@
-import { Box, Button, Container, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import about from "@/assets/about.png";
 
 const About = () => {
   const textColor = useColorModeValue("black", "white");
@@ -15,7 +25,10 @@ const About = () => {
             w={{ base: "full", xl: "50%" }}
             h={{ base: "470px", xl: "initial" }}
             bg={{ base: "#181823", xl: "initial" }}
-          ></VStack>
+            // justify='center'
+          >
+            <Image src={about} w='80%' />
+          </VStack>
 
           <VStack
             w={{ base: "full", xl: "50%" }}

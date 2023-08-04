@@ -84,7 +84,7 @@ const Footer = ({
                 <Text color={useColorModeValue("blue", "green")}>Drop me a like</Text>
               </HStack>
 
-              <Box color={textColor2}>
+              <Box color={textColor2} fontWeight='500'>
                 <Link id='footlink' to='/'>
                   Let's get started
                 </Link>
@@ -111,6 +111,7 @@ const Footer = ({
               align='flex-start'
               color={textColor}
               spacing='20px'
+              fontWeight='500'
             >
               <Link id='footlink' to='/' onClick={handleHomeClick}>
                 Home

@@ -8,8 +8,12 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import frame from "@/assets/frame.png";
-import work4 from "@/assets/work4.png";
+import bull1 from "@/assets/bull1.png";
+import piaza1 from "@/assets/piaza1.png";
+import tcon1 from "@/assets/tcon1.png";
+import bear1 from "@/assets/bearr.png";
+import flight1 from "@/assets/flight1.png";
+import lfg1 from "@/assets/lfg1.png";
 import { Link } from "react-router-dom";
 
 const Works = () => {
@@ -25,52 +29,40 @@ const Works = () => {
         <SimpleGrid pt='20px' pb='50px' w='full' columns={{ base: 1, xl: 2 }} spacing='30px'>
           <Link to='/t-connect'>
             <Box className='card'>
-              <Image src={frame} borderRadius='20px' />
+              <Image src={tcon1} borderRadius='20px' />
             </Box>
           </Link>
 
-          <Link to='/t-connect'>
+          <Link to='/piaza'>
             <Box className='card'>
-              <Image src={frame} borderRadius='20px' />
+              <Image src={piaza1} borderRadius='20px' />
             </Box>
           </Link>
 
           <Link to='/bulldog-billonaires'>
             <Box className='card'>
-              <Image src={work4} borderRadius='20px' />
+              <Image src={bull1} borderRadius='20px' />
             </Box>
           </Link>
 
-          <Link to='/t-connect'>
+          <Link to='/fly-air'>
             <Box className='card'>
-              <Image src={frame} borderRadius='20px' />
+              <Image src={flight1} borderRadius='20px' />
             </Box>
           </Link>
 
-          <Link to='/t-connect'>
+          <Link to='/bear-venture'>
             <Box className='card'>
-              <Image src={frame} borderRadius='20px' />
+              <Image src={bear1} borderRadius='20px' />
+            </Box>
+          </Link>
+
+          <Link to='/lfg-pass'>
+            <Box className='card'>
+              <Image src={lfg1} borderRadius='20px' />
             </Box>
           </Link>
         </SimpleGrid>
-
-        {/* <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>
-          Mobile Design
-        </Text>
-
-        <SimpleGrid pt='20px' pb='70px' w='full' columns={{ base: 1, xl: 2 }} spacing='20px'>
-          <Box>
-            <Image src={pic} />
-          </Box>
-
-          <Box>
-            <Image src={pic} />
-          </Box>
-
-          <Box>
-            <Image src={pic} />
-          </Box>
-        </SimpleGrid> */}
 
         <Box pb='20px'>
           <Text fontSize={{ base: "25px", xl: "25px" }} fontWeight='bold'>

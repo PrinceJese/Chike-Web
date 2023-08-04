@@ -1,5 +1,5 @@
-import Processinfo from "@/components/Processinfo";
-import ProcessMobile from "@/components/ProcessMobile";
+import Processinfo from "@/components/process/Processinfo";
+import ProcessMobile from "@/components/process/ProcessMobile";
 
 const DesignProcess = () => {
   return (

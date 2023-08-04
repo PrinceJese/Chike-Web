@@ -18,14 +18,7 @@ const IconStack = () => {
         position='relative'
         className='scrolly overflow'
       >
-        <Flex
-          align='center'
-          w='200%'
-          h='full'
-          className='scrollon'
-          position='absolute'
-          // left='0px'
-        >
+        <Flex align='center' w='200%' h='full' className='scrollon' position='absolute'>
           <Flex w='full' justify='space-around'>
             <Image src={processlogo1} w={{ base: "35px", xl: "45px" }} />
             <Image src={processlogo2} w={{ base: "35px", xl: "45px" }} />
