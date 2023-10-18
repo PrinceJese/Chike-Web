@@ -12,6 +12,8 @@ import Billonaires from "./pages/Billonaires";
 import Bear from "./pages/Bear";
 import Lfg from "./pages/Lfg";
 import Flight from "./pages/Flight";
+import Piazza from "./pages/Piazza";
+import ContactForm from "./pages/contact";
 
 const App = () => {
   const bgColor = useColorModeValue("#FFF3E4", "#000000");
@@ -44,11 +46,15 @@ const App = () => {
 
           <Route path='/fly-air' element={<Flight />} />
 
+          <Route path='/stylist-piazza' element={<Piazza />} />
+
           <Route path='/about' element={<AboutMe />} />
 
           <Route path='/process' element={<DesignProcess />} />
 
           <Route path='/works' element={<Works />} />
+
+          <Route path='/contact' element={<ContactForm />} />
         </Routes>
 
         <Footer

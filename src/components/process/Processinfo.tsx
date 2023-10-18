@@ -36,22 +36,20 @@ const Processinfo = () => {
 
   return (
     <Box>
-      <Container maxW={{ base: "6xl", xl: "5xl" }}>
-        <VStack py='50px' spacing='80px' color={textColor}>
-          <VStack w={{ base: "95%", xl: "4xl" }} spacing='30px'>
-            <Text fontSize='35px' align='center'>
+      <Container maxW='6xl'>
+        <VStack py='50px' w='full' spacing='80px' color={textColor}>
+          <VStack w={{ base: "95%", xl: "6xl" }} align='flex-start' spacing='30px'>
+            <Text fontSize='48px' fontWeight='700' lineHeight='49px'>
               My Design Process
             </Text>
 
-            <Text align='center' fontSize='17px'>
+            <Text fontSize='20px'>
               To design a successful project, I follow a process that includes carefully analyzing
               the requirements, gathering inspiration, sketching out initial ideas, and refining
               them through iteration and collaboration with clients and team members. I also pay
               attention to the target audience, budget, and technical limitations to create a final
               product that is both visually appealing and practical.
             </Text>
-
-            <Text></Text>
           </VStack>
 
           <Flex
@@ -68,10 +66,12 @@ const Processinfo = () => {
               <React.Fragment key={tab.title}>
                 <HStack
                   justify='center'
-                  p='5px'
+                  py='5px'
+                  px='15px'
                   minW='130px'
                   borderRadius='10px'
                   fontWeight='500'
+                  fontSize='32px'
                   bg={selectedTab === tab ? "#181823" : ""}
                   onClick={() => setSelectedTab(tab)}
                   cursor='pointer'
@@ -130,12 +130,12 @@ const Processinfo = () => {
                 // @ts-ignore
                 transition={{ duration: 0.9 }}
                 align='center'
-                fontSize='17px'
+                fontSize='24px'
               >
                 {selectedTab ? selectedTab.description : ""}
               </ChakraText>
 
-              <VStack spacing='1px' color={textColor2}>
+              <VStack spacing='1px' color={textColor2} fontSize='20px'>
                 <ChakraText
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}

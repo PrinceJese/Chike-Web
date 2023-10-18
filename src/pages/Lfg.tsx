@@ -24,6 +24,7 @@ const Lfg = () => {
       >
         <TopDescription
           title='LFG Pass'
+          weblink='https://lfgpass.vercel.app/'
           pic={lfg1}
           role='UI Design, UX Design'
           list={["NFT minting platform"]}
@@ -69,12 +70,7 @@ const Lfg = () => {
           </Box>
         </VStack>
 
-        <BaseLink
-          title='T-Connect'
-          nextlink='/t-connect'
-          sub='Web3 NFT leasing & renting platform'
-          textColor={textColor}
-        />
+        <BaseLink prevlink='/bear-venture' nextlink='/t-connect' textColor={textColor} />
       </VStack>
     </Container>
   );

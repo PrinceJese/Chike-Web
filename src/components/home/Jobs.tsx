@@ -7,12 +7,12 @@ import {
   Text,
   VStack,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 import work2 from "@/assets/frame2.png";
 import flight from "@/assets/flight.png";
 import piazza from "@/assets/piazza.png";
 import pic from "@/assets/frame.png";
-import { Link } from "react-router-dom";
 
 const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
   const textColor = useColorModeValue("black", "white");
@@ -31,10 +31,10 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
           </Text>
 
           <Text
-            fontSize={{ base: "25px", xl: "35px" }}
+            fontSize={{ base: "25px", xl: "48px" }}
             color={textColor}
             fontWeight='bold'
-            lineHeight='30px'
+            lineHeight={{ base: "25px", xl: "42px" }}
           >
             Check out some of <br /> my recent works
           </Text>
@@ -43,11 +43,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
             <Box className='card' borderRadius='20px' h='full' w='full' backgroundImage={pic}>
               <Box
                 className='overlay'
-                pt={{ base: "40px", xl: "350px" }}
-                pl={{ base: "21px", xl: "60px" }}
+                pt={{ base: "64px", xl: "350px" }}
+                pl={{ base: "20px", xl: "60px" }}
               >
                 <Text
-                  fontSize={{ base: "25px", xl: "32px" }}
+                  fontSize={{ base: "24px", xl: "32px" }}
                   fontWeight='bold'
                   lineHeight={{ base: "28px", xl: "30px" }}
                   color='#ffffff'
@@ -55,23 +55,28 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                   T-Connect
                 </Text>
 
-                <Box>
+                <Box pt={{ base: "0px", xl: "5px" }}>
                   <Text
-                    fontSize='18px'
+                    fontSize={{ base: "14px", xl: "18px" }}
                     as='em'
-                    lineHeight={{ base: "20px", xl: "30px" }}
+                    lineHeight={{ base: "10px", xl: "30px" }}
                     color='#ffffff'
                   >
                     Leading NFT rent and lease Marketplace
                   </Text>
                 </Box>
 
-                <Link to='/t-connect' onClick={handleChange}>
+                <Link href='/t-connect' onClick={handleChange}>
                   <Button
                     mt={{ base: "12px", xl: "25px" }}
                     h='45px'
                     px={{ base: "15px", xl: "45px" }}
-                    colorScheme='purple'
+                    _hover={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
+                    _active={{
+                      transform: "scale(0.98)",
+                      transition: "0.3s ease all",
+                    }}
+                    borderRadius={{ base: "15px", xl: "10px" }}
                   >
                     View More
                   </Button>
@@ -91,11 +96,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                 <Box className='card' borderRadius='20px' h='full' w='full' bgImg={work2}>
                   <Box
                     className='overlay'
-                    pt={{ base: "15px", xl: "350px" }}
-                    pl={{ base: "16px", xl: "60px" }}
+                    pt={{ base: "32px", xl: "350px" }}
+                    pl={{ base: "20px", xl: "60px" }}
                   >
                     <Text
-                      fontSize={{ base: "25px", xl: "32px" }}
+                      fontSize={{ base: "24px", xl: "32px" }}
                       fontWeight='bold'
                       lineHeight={{ base: "28px", xl: "30px" }}
                       color='#ffffff'
@@ -103,23 +108,28 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                       Bull-Dog Billonaires
                     </Text>
 
-                    <Box>
+                    <Box pt={{ base: "0px", xl: "5px" }}>
                       <Text
-                        fontSize='18px'
+                        fontSize={{ base: "14px", xl: "18px" }}
                         as='em'
-                        lineHeight={{ base: "20px", xl: "30px" }}
+                        lineHeight={{ base: "10px", xl: "30px" }}
                         color='#ffffff'
                       >
                         NFT Platform Monitoring System
                       </Text>
                     </Box>
 
-                    <Link to='/bulldog-billonaires' onClick={handleChange}>
+                    <Link href='/bulldog-billonaires' onClick={handleChange}>
                       <Button
                         mt={{ base: "12px", xl: "25px" }}
                         h='45px'
                         px={{ base: "15px", xl: "45px" }}
-                        colorScheme='purple'
+                        _hover={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
+                        _active={{
+                          transform: "scale(0.98)",
+                          transition: "0.3s ease all",
+                        }}
+                        borderRadius={{ base: "15px", xl: "10px" }}
                       >
                         View More
                       </Button>
@@ -139,11 +149,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                 <Box className='card' borderRadius='20px' h='full' w='full' bgImg={flight}>
                   <Box
                     className='overlay'
-                    pt={{ base: "10px", xl: "350px" }}
-                    pl={{ base: "15px", xl: "60px" }}
+                    pt={{ base: "59px", xl: "350px" }}
+                    pl={{ base: "20px", xl: "60px" }}
                   >
                     <Text
-                      fontSize={{ base: "25px", xl: "32px" }}
+                      fontSize={{ base: "24px", xl: "32px" }}
                       fontWeight='bold'
                       lineHeight={{ base: "28px", xl: "30px" }}
                       color='#ffffff'
@@ -151,23 +161,28 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                       Flyair
                     </Text>
 
-                    <Box>
+                    <Box pt={{ base: "0px", xl: "5px" }}>
                       <Text
-                        fontSize='18px'
+                        fontSize={{ base: "14px", xl: "18px" }}
                         as='em'
-                        lineHeight={{ base: "20px", xl: "30px" }}
+                        lineHeight={{ base: "10px", xl: "30px" }}
                         color='#ffffff'
                       >
                         Flight booking platform
                       </Text>
                     </Box>
 
-                    <Link to='/fly-air' onClick={handleChange}>
+                    <Link href='/fly-air' onClick={handleChange}>
                       <Button
                         mt={{ base: "12px", xl: "25px" }}
                         h='45px'
                         px={{ base: "15px", xl: "45px" }}
-                        colorScheme='purple'
+                        _hover={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
+                        _active={{
+                          transform: "scale(0.98)",
+                          transition: "0.3s ease all",
+                        }}
+                        borderRadius={{ base: "15px", xl: "10px" }}
                       >
                         View More
                       </Button>
@@ -182,11 +197,11 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
             <Box className='card' borderRadius='20px' h='full' w='full' bgImg={piazza}>
               <Box
                 className='overlay'
-                pt={{ base: "40px", xl: "350px" }}
+                pt={{ base: "64px", xl: "350px" }}
                 pl={{ base: "20px", xl: "60px" }}
               >
                 <Text
-                  fontSize={{ base: "25px", xl: "32px" }}
+                  fontSize={{ base: "24px", xl: "32px" }}
                   fontWeight='bold'
                   lineHeight={{ base: "28px", xl: "30px" }}
                   color='#ffffff'
@@ -194,23 +209,28 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                   Stylist Piazza
                 </Text>
 
-                <Box>
+                <Box pt={{ base: "0px", xl: "5px" }}>
                   <Text
-                    fontSize='18px'
+                    fontSize={{ base: "14px", xl: "18px" }}
                     as='em'
-                    lineHeight={{ base: "20px", xl: "30px" }}
+                    lineHeight={{ base: "10px", xl: "30px" }}
                     color='#ffffff'
                   >
                     Beauty & Lifestyle
                   </Text>
                 </Box>
 
-                <Link to='/piaza' onClick={handleChange}>
+                <Link href='/stylist-piazza' onClick={handleChange}>
                   <Button
                     mt={{ base: "12px", xl: "25px" }}
                     h='45px'
                     px={{ base: "15px", xl: "45px" }}
-                    colorScheme='purple'
+                    _hover={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
+                    _active={{
+                      transform: "scale(0.98)",
+                      transition: "0.3s ease all",
+                    }}
+                    borderRadius={{ base: "15px", xl: "10px" }}
                   >
                     View More
                   </Button>
@@ -220,23 +240,49 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
           </Box>
 
           <HStack w='full' justify='flex-end'>
-            <Link to='/works' onClick={handleChange}>
-              <Button
-                fontSize='11px'
-                fontWeight='bold'
-                borderRadius='1px'
-                bg='black'
-                px='25px'
-                py='10px'
-                border='1px'
-                borderColor='#5221E6'
-                color='#ffffff'
-                _active={{ bgColor: "#5221E6" }}
-                _hover={{ bgColor: "#5221E6" }}
-              >
-                VIEW ALL PROJECTS
-              </Button>
-            </Link>
+            <Box
+              w={{ base: "170px", xl: "258px" }}
+              h='62px'
+              borderLeftWidth='2px'
+              borderBottomWidth='2px'
+              borderRadius='8px'
+              pl='6px'
+              borderColor='#BA42C0'
+              _hover={{
+                transform: "scale(1.02)",
+                transition: "0.3s ease all",
+              }}
+              _active={{
+                bgColor: "#5221E6",
+                transform: "scale(0.98)",
+                transition: "0.3s ease all",
+              }}
+            >
+              <Box mt='-5px'>
+                <Link href='/works' onClick={handleChange}>
+                  <Button
+                    fontSize={{ base: "15px", xl: "18px" }}
+                    fontWeight='bold'
+                    borderWidth='1px'
+                    h='58px'
+                    w={{ base: "170px", xl: "250px" }}
+                    borderRadius='5px'
+                    borderColor='#5221E6'
+                    color={textColor}
+                    // bg='none'
+                    bg='linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)'
+                    _active={{
+                      bgColor: "#5221E6",
+                      transform: "scale(0.98)",
+                      transition: "0.3s ease all",
+                    }}
+                    _hover={{ bgColor: "#5221E6", color: "white" }}
+                  >
+                    VIEW ALL PROJECTS
+                  </Button>
+                </Link>
+              </Box>
+            </Box>
           </HStack>
         </VStack>
       </Container>

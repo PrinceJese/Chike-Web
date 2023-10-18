@@ -41,6 +41,7 @@ const Billonaires = () => {
       >
         <TopDescription
           title='Bull-Dog Billonaires'
+          weblink=''
           pic={work4}
           role='UI Design, UX Design, Design System, User Research'
           list={["NFT monitoring system"]}
@@ -175,12 +176,7 @@ const Billonaires = () => {
           a fee.'
         />
 
-        <BaseLink
-          title='Flyair'
-          nextlink='/fly-air'
-          sub='Flight booking platform'
-          textColor={textColor}
-        />
+        <BaseLink prevlink='/stylist-piazza' nextlink='/fly-air' textColor={textColor} />
       </VStack>
     </Container>
   );

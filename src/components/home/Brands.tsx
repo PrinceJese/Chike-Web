@@ -17,7 +17,7 @@ const Brands = () => {
               Work Experience
             </Text>
 
-            <Text fontSize={{ base: "25px", xl: "33px" }} fontWeight='bold' lineHeight='32px'>
+            <Text fontSize={{ base: "25px", xl: "48px" }} fontWeight='bold' lineHeight='50px'>
               Companies & Brands I have Worked
               <br /> with in the past
             </Text>

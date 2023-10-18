@@ -24,6 +24,7 @@ const Flight = () => {
       >
         <TopDescription
           title='Flyair'
+          weblink=''
           pic={flight1}
           role='UI Design, UX Design'
           list={["Flight booking platform", "Website design", "Mobile App design"]}
@@ -60,12 +61,7 @@ const Flight = () => {
           </Box>
         </VStack>
 
-        <BaseLink
-          title='BearVenture'
-          nextlink='/bear-venture'
-          sub='NFT minting platform'
-          textColor={textColor}
-        />
+        <BaseLink prevlink='/bulldog-billonaires' nextlink='/bear-venture' textColor={textColor} />
       </VStack>
     </Container>
   );

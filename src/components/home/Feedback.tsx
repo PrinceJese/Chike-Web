@@ -1,32 +1,46 @@
-import { Box, Container, Flex, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+  useColorMode,
+} from "@chakra-ui/react";
 import Comments from "./Comments";
 import arrow from "@/assets/arrow.png";
 
 const Feedback = () => {
   const textColor = useColorModeValue("white", "black");
   const textColor2 = useColorModeValue("#8491A0", "rgba(0, 0, 0, 0.75)");
-
   const bgColor = useColorModeValue("#181823", "#FFF3E4");
+  const { colorMode } = useColorMode();
 
   return (
-    <Box bg={bgColor} h='100vh'>
+    <Box
+      bg={bgColor}
+      h='100vh'
+      color={textColor}
+      _hover={{
+        bg: colorMode === "dark" ? "#181823" : "#FFF3E4",
+        color: colorMode === "dark" ? "white" : "black",
+        transition: "0.5s ease all",
+      }}
+    >
       <Container maxW={{ base: "95%", xl: "7xl" }} h='full'>
         <Flex
           w='full'
           h='full'
           justify='center'
-          py={{ base: "50px", "2xl": "80px" }}
+          py={{ base: "50px", xl: "90px" }}
           position={"relative"}
           direction={{ base: "column", xl: "row" }}
+          className='arrowHover'
         >
-          <VStack
-            w={{ base: "full", xl: "45%" }}
-            align='flex-start'
-            spacing='30px'
-            color={textColor}
-          >
+          <VStack w={{ base: "full", xl: "50%" }} align='flex-start' spacing='30px'>
             <Text
-              fontSize='40px'
+              fontSize='48px'
               fontWeight='bold'
               lineHeight='40px'
               display={{ base: "none", xl: "block" }}
@@ -46,45 +60,54 @@ const Feedback = () => {
             <Text
               fontSize={{ base: "18px", "2xl": "22px" }}
               display={{ base: "none", xl: "block" }}
-              color={textColor2}
+              // color={textColor2}
+              color='#5B6876'
             >
               Here are a few lines from clients I have worked within the past <br /> three years of
               my career.
             </Text>
 
-            <Text fontSize='18px' display={{ base: "block", xl: "none" }} color={textColor2}>
+            <Text
+              fontSize='18px'
+              display={{ base: "block", xl: "none" }}
+              // color={textColor2}
+              color='#5B6876'
+            >
               Here are a few lines from clients I have worked within the past three years of my
               career.
             </Text>
           </VStack>
 
           <VStack
-            w={{ base: "full", xl: "45%" }}
+            w={{ base: "full", xl: "50%" }}
             spacing='50px'
             className='overflow'
             overflowX='hidden'
             mt={{ base: "50px", xl: "0px" }}
-            color={textColor}
+            // color={textColor}
           >
             <Comments />
           </VStack>
 
           <Image
             src={arrow}
-            h='60px'
+            h='70px'
+            w='1%'
             position={"absolute"}
-            top={{ base: "400", xl: "195px" }}
-            right={{ base: "-10px", xl: "25px" }}
+            top={{ base: "400", xl: "190px" }}
+            right={{ base: "-20px", xl: "-20px" }}
+            className='arrowHover1'
           />
 
           <Text
             id='nav'
             position={"absolute"}
             top={{ base: "420px", xl: "220px" }}
-            right={{ base: "-53px", xl: "-20px" }}
-            fontSize='10px'
+            right={{ base: "-53px", xl: "-80px" }}
+            fontSize='13px'
             transform='rotate(90deg)'
-            color={textColor}
+            className='arrowHover2'
+            // color={textColor}
           >
             SCROLL DOWN
           </Text>

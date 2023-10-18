@@ -16,8 +16,8 @@ import {
   useColorModeValue,
   chakra,
   shouldForwardProp,
+  Link,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import menu from "@/assets/menu.svg";
@@ -78,7 +78,7 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
           <DrawerCloseButton mt='10px' w='30px' border='0px' bg='none' color={textColor} />
           <DrawerHeader>
             <Box onClick={onClose}>
-              <Link to='/' onClick={handleHomeClick}>
+              <Link href='/' onClick={handleHomeClick} _hover={{ textDecor: "none" }}>
                 <HStack>
                   <Image src={colorMode === "light" ? logoDark : logo} w='20px' />
                   <Text color={textColor} fontSize='22px' fontWeight='bold'>
@@ -100,34 +100,30 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
                 pt='20px'
               >
                 <Box onClick={onClose}>
-                  <Link to='/about' id='navlink' onClick={handleChange}>
+                  <Link href='/about' id='navlink' onClick={handleChange}>
                     About
                   </Link>
                 </Box>
 
                 <Box onClick={onClose}>
-                  <Link to='/process' id='navlink' onClick={handleChange}>
+                  <Link href='/process' id='navlink' onClick={handleChange}>
                     Design Process
                   </Link>
                 </Box>
 
                 <Box onClick={onClose}>
-                  <Link to='/works' id='navlink' onClick={handleChange}>
+                  <Link href='/works' id='navlink' onClick={handleChange}>
                     Works
                   </Link>
                 </Box>
 
                 <Box onClick={onClose}>
-                  <Link to='#reach' id='navlink' onClick={handleChange}>
+                  <Link href='/contact' id='navlink' onClick={handleChange}>
                     Contact
                   </Link>
                 </Box>
 
-                <HStack
-                  color={useColorModeValue("blue", "white")}
-                  spacing='15px'
-                  // onClick={toggleColorMode}
-                >
+                <HStack color={useColorModeValue("blue", "white")} spacing='15px'>
                   <Text>{colorMode === "light" ? "Night Mode" : "Day Mode"}</Text>
                   <Image src={colorMode === "light" ? nightMode : dayMode} w='17px' />
 
@@ -160,11 +156,60 @@ const Linkstack = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeCli
               </VStack>
 
               <HStack w='full' justify='space-around' pb='100px'>
-                <Image src={linkedin2} w='25px' />
-                <Image src={twitter2} w='325x' />
-                <Image src={dribble2} w='25px' />
-                <Image src={behance2} w='25px' />
-                <Image src={insta2} w='25px' />
+                <Link
+                  isExternal
+                  href='https://www.linkedin.com/in/princejese/'
+                  _active={{
+                    transform: "scale(0.98)",
+                    transition: "0.3s ease all",
+                  }}
+                >
+                  <Image src={linkedin2} w={{ base: "25", xl: "25px" }} />
+                </Link>
+
+                <Link
+                  isExternal
+                  href='https://twitter.com/Prince_Jese'
+                  _active={{
+                    transform: "scale(0.98)",
+                    transition: "0.3s ease all",
+                  }}
+                >
+                  <Image src={twitter2} w={{ base: "25", xl: "25px" }} />
+                </Link>
+
+                <Link
+                  isExternal
+                  href='https://www.dribbble.com/Prince_Jese'
+                  _active={{
+                    transform: "scale(0.98)",
+                    transition: "0.3s ease all",
+                  }}
+                >
+                  <Image src={dribble2} w={{ base: "25", xl: "25px" }} />
+                </Link>
+
+                <Link
+                  isExternal
+                  href='https://www.behance.net/ayomideahamefu'
+                  _active={{
+                    transform: "scale(0.98)",
+                    transition: "0.3s ease all",
+                  }}
+                >
+                  <Image src={behance2} w={{ base: "25", xl: "25px" }} />
+                </Link>
+
+                <Link
+                  isExternal
+                  href='https://www.instagram.com/prince_jese/'
+                  _active={{
+                    transform: "scale(0.98)",
+                    transition: "0.3s ease all",
+                  }}
+                >
+                  <Image src={insta2} w={{ base: "25", xl: "25px" }} />
+                </Link>
               </HStack>
             </VStack>
           </DrawerBody>

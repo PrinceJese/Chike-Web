@@ -40,6 +40,7 @@ const TConnect = () => {
       >
         <TopDescription
           title='T-Connect'
+          weblink='https://upbeat-benz-9c9d9d.netlify.app/'
           pic={pic}
           role='UI Design, UX Design, Design System, User Research'
           list={["Web3 NFT leasing & renting platform", "Website Design"]}
@@ -197,12 +198,7 @@ const TConnect = () => {
           a fee.'
         />
 
-        <BaseLink
-          title='Stylist Piazza'
-          nextlink='/piaza'
-          sub='Beauty & Lifestyle'
-          textColor={textColor}
-        />
+        <BaseLink prevlink='/lfg-pass' nextlink='/stylist-piazza' textColor={textColor} />
       </VStack>
     </Container>
   );

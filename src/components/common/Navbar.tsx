@@ -6,14 +6,19 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import Linkstack from "./linkstack";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import darkIcon from "@/assets/dark.svg";
+import lightIcon from "@/assets/light.svg";
 
 const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(): any }) => {
   const { toggleColorMode, colorMode } = useColorMode();
+
+  const router = useLocation();
 
   const textColor = useColorModeValue("black", "white");
   const bgColor = useColorModeValue("#FFF3E4", "#000000");
@@ -35,14 +40,14 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
       <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
-            <Link onClick={handleHomeClick} to='/'>
+            <Link onClick={handleHomeClick} href='/' _hover={{ textDecor: "none" }}>
               <HStack>
                 <Image
                   src={colorMode === "light" ? logoDark : logo}
                   w={{ base: "23px", xl: "initial" }}
                 />
 
-                <Text color={textColor} fontWeight='bold' fontSize='18px'>
+                <Text color={textColor} fontWeight='bold' fontSize='20px'>
                   Ahamefula Ayomide
                 </Text>
               </HStack>
@@ -58,31 +63,54 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             fontSize='16px'
             fontWeight='500'
           >
-            <Link id='navlink' to='/about' onClick={handleChange}>
+            <Link
+              id='navlink'
+              href='/about'
+              onClick={handleChange}
+              borderRadius={router.pathname.includes("about") ? "3px" : ""}
+              borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
+              // borderColor={router.pathname.includes("about") ? "" : ""}
+            >
               About
             </Link>
 
-            <Link id='navlink' to='/process' onClick={handleChange}>
+            <Link
+              id='navlink'
+              href='/process'
+              onClick={handleChange}
+              borderRadius={router.pathname.includes("process") ? "3px" : ""}
+              borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
+            >
               Design Process
             </Link>
 
-            <Link id='navlink' to='/works' onClick={handleChange}>
+            <Link
+              id='navlink'
+              href='/works'
+              onClick={handleChange}
+              borderRadius={router.pathname.includes("works") ? "3px" : ""}
+              borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
+            >
               Works
             </Link>
 
-            <Link id='navlink' to='#reach' onClick={handleChange}>
+            <Link
+              id='navlink'
+              href='/contact'
+              onClick={handleChange}
+              borderRadius={router.pathname.includes("contact") ? "3px" : ""}
+              borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
+            >
               Contact
             </Link>
 
-            <Box
-              w='23px'
-              h='23px'
-              border='2px'
-              borderColor='peach'
-              borderRadius='50%'
-              bg={toggleColor}
-              onClick={toggleColorMode}
-            ></Box>
+            <Box _hover={{ transform: "scale(0.94)", transition: "0.5s ease-in-out" }}>
+              <Image
+                src={colorMode === "light" ? darkIcon : lightIcon}
+                onClick={toggleColorMode}
+                cursor='pointer'
+              />
+            </Box>
           </HStack>
 
           <Linkstack onLinkClick={onLinkClick} onHomeClick={onHomeClick} />

@@ -24,6 +24,7 @@ const Bear = () => {
       >
         <TopDescription
           title='BearVenture'
+          weblink='https://bear-venture-nft.vercel.app/'
           pic={bear1}
           role='UI Design, UX Design'
           list={["NFT minting platform", "Website design"]}
@@ -74,12 +75,7 @@ const Bear = () => {
           </Box>
         </VStack>
 
-        <BaseLink
-          title='LFG Pass'
-          nextlink='/lfg-pass'
-          sub='NFT minting website'
-          textColor={textColor}
-        />
+        <BaseLink prevlink='/fly-air' nextlink='/lfg-pass' textColor={textColor} />
       </VStack>
     </Container>
   );

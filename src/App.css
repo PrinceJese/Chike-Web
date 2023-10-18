@@ -13,6 +13,7 @@ html {
   transition: 0.8s ease-out;
   border-radius: 3px;
   border-bottom: 1.5px #5221e6 solid;
+  text-decoration: none;
 }
 
 #hero {
@@ -34,17 +35,46 @@ html {
   height: 100%;
   border-radius: 20px;
   background-color: #232525b6;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .card:hover .overlay {
-  bottom: 0;
+  top: 0;
   transition: all 0.3s ease-in-out;
+}
+
+.overlay2 {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.card:hover .overlay2 {
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.03);
-  transition: all 0.8s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.arrowHover:hover .arrowHover1 {
+  transform: translateY(20px);
+  transition: ease 0.5s all;
+  height: 80px;
+}
+
+.arrowHover:hover .arrowHover2 {
+  transform: translateY(20px) rotate(90deg);
+  transition: ease 0.5s all;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%);
 }
 
 .overflow::-webkit-scrollbar {
@@ -68,7 +98,7 @@ html {
   }
 }
 
-#form {
+.form {
   width: 100%;
 }
 
@@ -79,4 +109,5 @@ html {
 
 #footlink:hover {
   color: green;
+  text-decoration: none;
 }
